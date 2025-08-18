@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luka's website</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <script>
+    window.addEventListener("DOMContentLoaded", (event) => {
+      const upArrow = document.getElementById("up-arrow");
+      const downArrow = document.getElementById("down-arrow");
+      const menuLinks = document.getElementById("menu-links");
+      downArrow.addEventListener("click", toggleMenu);
+      upArrow.addEventListener("click", toggleMenu);
+
+      function toggleMenu() {
+        const isOpen = menuLinks.classList.toggle("active");
+        if (isOpen) {
+          downArrow.style.display = "none";
+          upArrow.style.display = "block";
+        } else {
+          downArrow.style.display = "block";
+          upArrow.style.display = "none";
+        }
+      }
+    });
+  </script>
+  <body>
+    <div id="header-background"></div>
+    <header>
+      <svg id="down-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 10L12 15L17 10" stroke="#D4D4D4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg id="up-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)"><path d="M7 10L12 15L17 10" stroke="#D4D4D4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h1>Luka Dekanozishvili</h1>
+      <ul id="menu-links">
+        <li></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#blogs">Blog</a></li>
+        <li><a href="#personal-milestones">Personal milestones</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li></li>
+      </ul>
+    </header>
+
+    <main>
+      <div id="splash">
+        <img id="author-image" src="static/assets/images/author-image.webp" alt="Author's image">
+        <div id="author-description">
+          <h1>Luka Dekanozishvili</h1>
+          <h2>Student, developer & DevOps enthusiast</h2>
+        </div>
+      </div>
+      <hr>
+      <div id="introduction-content">
+        <h1>Welcome to Luka's self-hosted website!</h1>
+        <span>
+          Here I talk about my experiences with tech, as well as present
+          my career path, education, projects, and experiences.
+          <p>
+          Check out my <a href="">blog</a> (work in progress), as well as my <a href="">personal milestones</a> (work in progress), which lists my active and completed goals for the future.
+        </span>
+      </div>
+      <div id="main-content">
+        <h1>Projects</h1>
+        <div class="project">
+          <h2>EMBArk – Django-UI for Siemens Energy</h2>
+          <span>
+            Open source university project in cooperation with Siemens Energy: Further development of a Python web UI for managing firmware analyses via SSH workers in a team, with a focus on agile methodologies.
+            <p>
+            Our student team had multiple weekly meetings in which we discussed the future of the project and prioritized tickets. We also had mandatory reviews for each pull-request which helped uphold a high standard of code-quality.
+          </span>
+        </div>
+        <div class="project">
+          <h2>Server administration of network systems with NixOS</h2>
+          <span>
+            Declarative configuration & administration of fault-tolerant servers with Cloudflare, Mesh VPNs, nginx, ZFS, SSHFS, monitoring, cloud printing, email server, and proxy. With a focus on IT security, reliability, and best practices.
+            <p>
+            This is currently my main hobby. Started in 2024, now I rely on many of these services. I also run a server for my parents which they use for media storage as well as QoL improvements like cloud-printing. This server is also used as a remote backup.
+            <p>
+            With this, my journey to degoogle my life and rely less on external services has been a success.
+          </span>
+        </div>
+        <div class="project">
+          <h2>File archiver in C</h2>
+          <span>
+            Archives/extracts files in its own format using Huffman coding. Implements multi-stage compression for a minimal file size. Programmed without external dependencies or libraries.
+            <p>
+            This was done to learn about Huffman coding and different file compression techniques. I also had to come up with my own format to overcome the challenges of storing data in bits instead of bytes (as per the algorithm).
+          </span>
+        </div>
+        <h1>Career</h1>
+        <div class="career">
+          <h2>Junior Backend Engineer Internship – Talkpal Inc.</h2>
+          <span>
+            Scrum-based backend development with NestJS & microservices: optimization of Redis queues for email scheduling, endpoint conversion in Swagger, debugging with PostgreSQL, etc.
+            <p>
+            Here I had first-hand experience in how mid to large teams operate. I helped with bugfixes, modularized endpoints, updated the documentation, and optimized Redis queue sizes of mails.
+          </span>
+        </div>
+        <div class="career">
+          <h2>Information Technology Support Specialist – Cura Unternehmensgruppe GmbH</h2>
+          <span>
+            Support with network and user administration, hardware maintenance and management, automation, and documentation in the IT field.
+            <p>
+            Here I gained invaluable people-skills, as well as further developed my logical reasoning. Problems in IT seem often unexplainable, but the methodology of fixing it is often quite similar.
+            <p>
+            I also worked on repairing/repurposing decommissioned hardware as well as automating some chores my colleagues had to do e.g. user account creation using a PowerShell script that reorders a CSV, and creates new fields based on hashmaps.
+          </span>
+        </div>
+      </div>
+    </main>
+    <hr>
+    <footer>
+      <div id="links-container">
+        <div id="contact-container">
+          <h2>Contact me</h2>
+          <ul>
+            <li>Email: <a href="mailto:me@lukadeka.com">me@lukadeka.com</a></li>
+            <li>GitHub: <a href="https://github.com/LukaDeka/">LukaDeka</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/lukadeka/">Luka Dekanozishvili</a></li>
+            <li>GPG key: <a href="https://gpg.lukadeka.com">TBD.</a></li>
+          </ul>
+        </div>
+        <div id="site-map-container">
+          <h2>Site map</h2>
+          <ul id="site-map">
+            <li></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#blogs">Blog</a></li>
+            <li><a href="#personal-milestones">Personal milestones</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+      <div id="bottom-bar">
+        <div id="bottom-bar-container">
+          <span>© 2025-<script>document.write(new Date().getFullYear())</script> Luka Dekanozishvili</span>
+          <a href="https://github.com/LukaDeka/portfolio-website">Website source code</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

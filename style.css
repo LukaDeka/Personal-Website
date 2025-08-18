@@ -1,0 +1,297 @@
+body {
+  margin: 8px;
+  font-family: Helvetica, sans-serif;
+  background-color: #181A1D;
+  margin-bottom: 0;
+}
+
+#header-background {
+  position: fixed;
+  top: 0;
+  z-index: 0;
+  background-color: #181A1D;
+  width: 100%;
+  height: 50px;
+}
+
+header {
+  z-index: 1;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  top: 8px;
+  border-radius: 10px;
+  background-color: #32363D;
+  height: 50px;
+  width: 100%;
+}
+
+header h1 {
+  white-space: nowrap;
+  color: #D4D4D4;
+  padding: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  font-size: 24px;
+}
+
+#menu-links {
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background-color: #32363D;
+  gap: 5px;
+  border-radius: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+}
+
+#menu-links a {
+  display: block;
+  padding: 10px 20px;
+  background-color: #F68330;
+  color: #F3F4F6;
+  text-decoration: none;
+  border-radius: 6px;
+  border-style: solid; 
+  border-width: 3px;
+  border-color: #292F37;
+  font-weight: bold;
+}
+
+#up-arrow, #down-arrow {
+  display: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+@media (max-width: 920px) {
+  header h1 {
+    margin-left: auto;
+  }
+
+  #down-arrow {
+    display: block;
+  }
+
+  #up-arrow {
+    display: none;
+  }
+
+  #menu-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 35px;
+    width: 100%;
+    background-color: #32363D;
+    padding: 15px 0;
+    padding-top: 20px;
+    gap: 10px;
+  }
+
+  #menu-links.active {
+    display: flex;
+  }
+
+  #menu-links a {
+    text-align: center;
+  }
+
+  #menu-links li {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+#splash {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+#author-image {
+  width: 150px;
+  height: 150px;
+  margin: 0;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 6px;
+  border-color: #292F37;
+}
+
+@media (min-width: 768px) {
+  #splash {
+    flex-direction: row;
+  }
+}
+
+#author-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#author-description * {
+  margin: 10px;
+}
+
+#introduction-content {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project, .career {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  text-align: center;
+  border: dotted 4px;
+  margin: 10px;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px;
+}
+
+h2, h3, h4 {
+  text-align: center;
+  color: #7C8994;
+  margin: 15px;
+}
+
+span {
+  padding: 15px;
+}
+
+a {
+  color: #F68330;
+}
+
+a:hover {
+  color: #C85C1C;
+  transition-duration: 300ms;
+}
+
+#menu-links a:hover {
+  background-color: #C85C1C;
+  transition-duration: 300ms;
+}
+
+main {
+  color: #D4D4D4;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  margin: 30px;
+  max-width: 1300px;
+  align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#links-container {
+  color: #7C8994;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1200px;
+  gap: 30px;
+  position: relative;
+  margin-bottom: 30px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#links-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#links-container li {
+  color: #D4D4D4;
+}
+
+#links-container h2 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  #links-container {
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    gap: 0;
+  }
+  #links-container div {
+    margin-right: auto;
+  }
+  #links-container h2 {
+    margin-right: auto;
+    text-align: left;
+  }
+  #links-container li {
+  }
+}
+
+#bottom-bar {
+  background-color: #32363D;
+  height: 40px;
+  margin: auto;
+}
+
+#bottom-bar-container {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: auto;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+#bottom-bar span {
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+  color: #7C8994;
+}
+
+#bottom-bar a {
+  margin-left: auto;
+  padding: 0;
+}
