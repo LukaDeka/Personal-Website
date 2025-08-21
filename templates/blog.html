@@ -5,10 +5,13 @@
   {{ section.title }}
 </h1>
 <ul>
-  <!-- If you are using pagination, section.pages will be empty.
-       You need to use the paginator object -->  
   {% for page in section.pages %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+    <div id="main-content">
+      <div class="project">
+        <h2><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h2>
+        <p>{{ page.description }}</p>
+      </div>
+    </div>
   {% endfor %}
 </ul>
 {% endblock content %}

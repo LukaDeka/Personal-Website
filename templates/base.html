@@ -1,17 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luka's website</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js"></script>
+  </head>
+  <body>
+    <div id="header-background"></div>
+    <header>
+      <svg id="down-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 10L12 15L17 10" stroke="#D4D4D4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg id="up-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)"><path d="M7 10L12 15L17 10" stroke="#D4D4D4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h1>Luka Dekanozishvili</h1>
+      <ul id="menu-links">
+        <li></li>
+        <li><a href="/">Portfolio</a></li>
+        <li><a href="/cv">CV</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/personal-milestones">Personal milestones</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li></li>
+      </ul>
+    </header>
 
-<head>
-  <meta charset="utf-8">
-  <title>MyBlog</title>
-</head>
-
-<body>
-  <section class="section">
-    <div class="container">
-      {% block content %} {% endblock content %}
-    </div>
-  </section>
-</body>
-
+    <main>
+      <div id="splash">
+        <img id="author-image" class="non-draggable" src="/assets/images/author-image.webp" alt="Author's image">
+        <div id="author-description">
+          <h1>Luka Dekanozishvili</h1>
+          <h2>Student, developer & DevOps enthusiast</h2>
+        </div>
+      </div>
+      <hr>
+      <div id="content">
+        {% block content %} {% endblock content %}
+      </div>
+    </main>
+    <hr>
+    <footer>
+      <div id="links-container">
+        <div>
+          <h2>Contact me</h2>
+          <ul>
+            <li>Email: <a href="mailto:me@lukadeka.com">me@lukadeka.com</a></li>
+            <li>GitHub: <a href="https://github.com/LukaDeka/">LukaDeka</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/lukadeka/">Luka Dekanozishvili</a></li>
+            <li>GPG key: <a href="https://lukadeka.com/gpg">TBD.</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site map</h2>
+          <ul id="site-map">
+            <li></li>
+            <li><a href="/">Portfolio</a></li>
+            <li><a href="/cv">CV</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/personal-milestones">Personal milestones</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+      <div id="bottom-bar">
+        <div id="bottom-bar-container">
+          <span>© 2025-<script>document.write(new Date().getFullYear())</script> Luka Dekanozishvili</span>
+          <a href="https://github.com/LukaDeka/portfolio-website">Website source code</a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

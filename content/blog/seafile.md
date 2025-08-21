@@ -1,9 +1,10 @@
 +++
 title = "Setting up Seafile on NixOS"
+description = "Here I talk about setting up Seafile, a file server, on NixOS. It proved challenging since no direct documentation was available for NixOS, so I wrote this wiki entry."
 date = 2024-12-03
 +++
 
-## Introduction
+# Introduction
 
 [Seafile](https://www.seafile.com/) is a file-hosting software
 system with a simple web interface and client applications for file
@@ -13,7 +14,9 @@ such as Dropbox and Google Drive.
 As opposed to [Nextcloud](https://nextcloud.com/), Seafile offers simpler
 user administration and much better file-server performance.
 
-## Setup
+## Nested thing
+
+# Setup
 Minimal configuration of Seafile:
 ``` nix
   services.seafile = {
@@ -65,7 +68,7 @@ Use nginx to serve Seafile from a unix socket:
   };
 ```
 
-## Additional configuration
+# Additional configuration
 ``` nix
   services.seafile = {
     # ...
@@ -96,7 +99,7 @@ appropriate permissions, `chown -R seafile:seafile` it and set:
   };
 ```
 
-## Additional info
+# Troubleshooting
 The `initialAdminPassword` is set only once when the server is first
 initialized. Any changes to it afterward will have no effect on it. If
 you cannot log in for the first time, delete `/var/lib/seafile/data`,
@@ -104,10 +107,8 @@ remove the Seafile configuration from your config, rebuild, re-add it,
 and the password will be set in the next rebuild.
 
 Logs for Seafile and SeaHub (Seafile's web interface) are stored
-respectively in `/var/log/seafile/server.log` and
-`/var/log/seafile/seahub.log`.
+in `/var/log/seafile/server.log` and `/var/log/seafile/seahub.log` respectively.
 
 For additional options, refer to the [Seafile Admin
-Manual](https://manual.seafile.com/13.0/config/)
-
+Manual](https://manual.seafile.com/13.0/config/).
 
