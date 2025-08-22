@@ -315,39 +315,58 @@ hr {
 
 
 /* Blog */
+
 pre {
-  /* background-color: #181A1D; */
+  background-color: #25282D !important;
   text-align: left;
   border-radius: 10px;
-  border-width: 4px;
-  border-style: solid;
-  border-color: #292F37;
+  padding: 12px;
+  font-family: "Courier New";
+  overflow-y: auto;
+}
+
+code {
   padding: 4px;
   font-family: "Courier New";
 }
 
-/* span { */
-/*   padding: 15px; */
-/* } */
+.copy-button-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: inline-flex;
+  justify-content: end;
+}
+
+.copy-button {
+  padding: 4px;
+  background-color: #F68330;
+  color: #F3F4F6;
+  text-decoration: none;
+  border-radius: 6px;
+  border-style: solid; 
+  border-width: 3px;
+  border-color: #292F37;
+  font-weight: bold;
+}
+
+.copy-button:hover {
+  background-color: #C85C1C;
+  transition-duration: 300ms;
+}
 
 #table-of-contents {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-content: center; */
   text-align: left;
   list-style-type: disc;
-  /* padding: auto; */
-  /* margin: auto; */
-  margin-left: 20px;
-  /* margin-right: auto; */
+  margin: 20px;
+  margin-bottom: 40px;
 }
 
 #table-of-contents li ul {
   text-align: left;
   list-style-type: circle;
   margin-left: 20px;
-  /* padding: auto; */
-  /* margin: auto; */
 }
 
 #blog-content p {
@@ -360,8 +379,8 @@ pre {
 }
 
 #blog-content :is(h2, h3, h4, pre) {
-  /* color: #ffffff; */
   text-align: left;
   margin: 10px;
   margin-left: 0;
 }
+

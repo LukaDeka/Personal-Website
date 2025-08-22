@@ -1,8 +1,20 @@
 +++
 title = "Setting up Seafile on NixOS"
-description = "Here I talk about setting up Seafile, a file server, on NixOS. It proved challenging since no direct documentation was available for NixOS, so I wrote this wiki entry."
+description = "After I decided I wanted to set up Seafile, a file server, I found little documentation for NixOS. After experimenting with the options, and asking the maintainer for help, I finally got a working configuration, and decided to write a wiki entry as well to help future NixOS newcomers."
 date = 2024-12-03
 +++
+
+# Preface
+After I decided I wanted to set up Seafile, a file server, I found little
+documentation for NixOS.
+
+After experimenting with the options, and asking the maintainer for help, I
+finally got a working configuration, and decided to write a wiki entry as well
+to help future NixOS newcomers.
+
+This entry is also available on
+[wiki.nixos.org](https://wiki.nixos.org/wiki/Seafile) and
+[nixos.wiki](https://nixos.wiki/wiki/Seafile).
 
 # Introduction
 
@@ -12,13 +24,11 @@ access. Seafile's functionality is similar to file-hosting services
 such as Dropbox and Google Drive.
 
 As opposed to [Nextcloud](https://nextcloud.com/), Seafile offers simpler
-user administration and much better file-server performance.
-
-## Nested thing
+user administration and better file-server performance.
 
 # Setup
 Minimal configuration of Seafile:
-``` nix
+```nix
   services.seafile = {
     enable = true;
 
@@ -36,7 +46,7 @@ Minimal configuration of Seafile:
 ```
 
 Use nginx to serve Seafile from a unix socket:
-``` nix
+```nix
   services.nginx.virtualHosts."seafile.example.com" = {
     forceSSL = true;
     enableACME = true;
@@ -69,7 +79,7 @@ Use nginx to serve Seafile from a unix socket:
 ```
 
 # Additional configuration
-``` nix
+```nix
   services.seafile = {
     # ...
     seafileSettings = {
@@ -92,7 +102,7 @@ Use nginx to serve Seafile from a unix socket:
 
 To change the directory of the database, create the directory with the
 appropriate permissions, `chown -R seafile:seafile` it and set:
-``` nix
+```nix
   services.seafile = {
     # ...
     dataDir = "/path/seafile/data";
