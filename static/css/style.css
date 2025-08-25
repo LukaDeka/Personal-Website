@@ -1,14 +1,14 @@
 body {
-  font-family: Helvetica, sans-serif;
-  background-color: #181A1D;
+  font-family: Arial;
+  background: #181A1D;
   margin-bottom: 0;
 }
 
 #header-background {
   position: fixed;
   top: 0;
-  z-index: 0;
-  background-color: #181A1D;
+  z-index: 1;
+  background: #181A1D;
   width: 100%;
   height: 50px;
 }
@@ -21,7 +21,7 @@ header {
   flex-direction: row;
   top: 8px;
   border-radius: 10px;
-  background-color: #32363D;
+  background: #32363D;
   height: 50px;
   width: 100%;
 }
@@ -42,7 +42,7 @@ header h1 {
   display: flex;
   justify-content: center;
   list-style: none;
-  background-color: #32363D;
+  background: #32363D;
   gap: 5px;
   border-radius: 10px;
   margin-top: auto;
@@ -53,7 +53,7 @@ header h1 {
 #menu-links a {
   display: block;
   padding: 10px 20px;
-  background-color: #F68330;
+  background: #F68330;
   color: #F3F4F6;
   text-decoration: none;
   border-radius: 6px;
@@ -90,7 +90,7 @@ header h1 {
     position: absolute;
     top: 35px;
     width: 100%;
-    background-color: #32363D;
+    background: #32363D;
     padding: 15px 0;
     padding-top: 20px;
     gap: 10px;
@@ -227,7 +227,7 @@ a:hover {
 }
 
 #menu-links a:hover {
-  background-color: #C85C1C;
+  background: #C85C1C;
   transition-duration: 300ms;
 }
 
@@ -237,7 +237,6 @@ hr {
   margin-left: auto;
   margin-right: auto;
 }
-
 
 #links-container {
   color: #7C8994;
@@ -296,7 +295,7 @@ hr {
 }
 
 #bottom-bar {
-  background-color: #32363D;
+  background: #32363D;
   height: 40px;
   margin: auto;
   width: 100%;
@@ -313,35 +312,52 @@ hr {
   padding: 10px;
 }
 
-
 /* Blog */
 
 pre {
-  background-color: #25282D !important;
+  position: relative;
+  background: #25282D !important;
   text-align: left;
   border-radius: 10px;
   padding: 12px;
   font-family: "Courier New";
-  overflow-y: auto;
+  z-index: 0;
+  margin: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 code {
+  z-index: 1;
   padding: 4px;
+  font-family: "Courier New";
+  display: block;
+  overflow: auto;
+}
+
+p code {
+  display: inline;
+  position: relative;
+  z-index: -1;
+  background: #25282D;
+  border-radius: 10px;
+  padding: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
   font-family: "Courier New";
 }
 
-.copy-button-container {
-  position: sticky;
-  top: 0;
-  left: 0;
+.copy-btn-container {
+  position: absolute;
   width: 100%;
-  display: inline-flex;
+  display: flex;
   justify-content: end;
+  pointer-events: none;
 }
 
-.copy-button {
-  padding: 4px;
-  background-color: #F68330;
+.copy-btn {
+  pointer-events: fill;
+  background: #F68330;
   color: #F3F4F6;
   text-decoration: none;
   border-radius: 6px;
@@ -349,24 +365,65 @@ code {
   border-width: 3px;
   border-color: #292F37;
   font-weight: bold;
+  width: 20px;
+  padding: 4px;
+  margin-right: 21px;
+  cursor: pointer;
+  transition-duration: 300ms;
+  transform: translateY(-3.5px);
 }
 
-.copy-button:hover {
-  background-color: #C85C1C;
+.copy-btn:hover {
+  background: #C85C1C;
   transition-duration: 300ms;
+}
+
+.copy-btn-clicked {
+  background: #0E9F6E !important;
+}
+
+blockquote {
+  background: #25282D;
+  border-left: 6px solid #F05252;
+  font-style: oblique;
+  margin: 20px;
+  margin-left: 30px;
+  padding: 12px;
+  display: flex;
+}
+
+blockquote p {
+  display: inline;
+  margin: 4px;
+  margin-left: 8px;
+}
+
+ol {
+  margin-left: 8px;
+}
+
+ol li {
+  padding: 2px;
 }
 
 #table-of-contents {
   text-align: left;
   list-style-type: disc;
   margin: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 0;
 }
 
 #table-of-contents li ul {
   text-align: left;
   list-style-type: circle;
   margin-left: 20px;
+}
+
+#blog-header :is(h1, h4) {
+  text-align: left;
+  margin: 10px;
+  margin-left: 6px;
+  margin-bottom: 0;
 }
 
 #blog-content p {
@@ -378,9 +435,8 @@ code {
   text-align: left;
 }
 
-#blog-content :is(h2, h3, h4, pre) {
-  text-align: left;
-  margin: 10px;
-  margin-left: 0;
+#blog-content :is(h1, h2, h3, h4, p, blockquote) {
+  padding-left: 6px;
+  padding-right: 6px;
 }
 

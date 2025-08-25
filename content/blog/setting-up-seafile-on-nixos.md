@@ -18,6 +18,13 @@ This entry is also available on
 
 # Introduction
 
+```
+thing
+```
+```
+thing
+```
+
 [Seafile](https://www.seafile.com/) is a file-hosting software
 system with a simple web interface and client applications for file
 access. Seafile's functionality is similar to file-hosting services
@@ -28,7 +35,7 @@ user administration and better file-server performance.
 
 # Setup
 Minimal configuration of Seafile:
-```nix
+```nix, copy
   services.seafile = {
     enable = true;
 
@@ -46,7 +53,7 @@ Minimal configuration of Seafile:
 ```
 
 Use nginx to serve Seafile from a unix socket:
-```nix
+```nix, copy
   services.nginx.virtualHosts."seafile.example.com" = {
     forceSSL = true;
     enableACME = true;
@@ -79,7 +86,7 @@ Use nginx to serve Seafile from a unix socket:
 ```
 
 # Additional configuration
-```nix
+```nix, copy
   services.seafile = {
     # ...
     seafileSettings = {
@@ -102,7 +109,7 @@ Use nginx to serve Seafile from a unix socket:
 
 To change the directory of the database, create the directory with the
 appropriate permissions, `chown -R seafile:seafile` it and set:
-```nix
+```nix, copy
   services.seafile = {
     # ...
     dataDir = "/path/seafile/data";

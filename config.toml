@@ -8,7 +8,7 @@ compile_sass = false
 build_search_index = false
 
 # The default author for pages
-# author = "Luka Dekanozishvili"
+author = "Luka Dekanozishvili"
 
 # The taxonomies to be rendered for the site and their configuration of the default languages
 taxonomies = [
@@ -16,9 +16,7 @@ taxonomies = [
 ]
 
 [markdown]
-# Whether to do syntax highlighting
 highlight_code = true
-
 highlight_theme = "charcoal"
 
 # When set to "true", emoji aliases translated to their corresponding
@@ -35,5 +33,3 @@ external_links_no_follow = true
 # Whether to set rel="noreferrer" for all external links
 external_links_no_referrer = true
 
-[extra]
-# Put all your custom variables here
