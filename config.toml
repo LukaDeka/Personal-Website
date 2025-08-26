@@ -11,9 +11,9 @@ build_search_index = false
 author = "Luka Dekanozishvili"
 
 # The taxonomies to be rendered for the site and their configuration of the default languages
-taxonomies = [
-  {name = "tags", feed = true, paginate_by = 20},
-]
+# taxonomies = [
+#   {name = "tags", feed = true, paginate_by = 20},
+# ]
 
 [markdown]
 highlight_code = true
