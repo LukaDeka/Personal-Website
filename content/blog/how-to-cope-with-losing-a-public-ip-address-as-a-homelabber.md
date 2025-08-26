@@ -103,5 +103,5 @@ Deploying Netbird on NixOS took some time since I couldn't find a guide for NixO
 
 Netbird has been working great ever since the initial deployment.
 
-Since the VPS has a publicly routable IP (how else would you access it?), all that's needed is to proxy the desired traffic to the home-server via the Netbird IP and that's all she wrote.
+Since the VPS has a publicly routable IP (how else would you access it?), all that's needed is to proxy the desired traffic to the home-server via the Netbird IP, and that's all she wrote.
 
