@@ -1,13 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-
 <div id="blog-header">
   <h1 class="title">
     {{ page.title }}
   </h1>
-
-  <h4>{{ page.date }} &middot; {{ page.reading_time }} minute read</h4>
 
   {% if page.toc %}
     <ul id="table-of-contents">
@@ -26,11 +23,7 @@
     </ul>
   {% endif %}
 </div>
-
 <div id="blog-content">
-  <hr>
-
   {{ page.content | safe }}
 </div>
-
 {% endblock content %}

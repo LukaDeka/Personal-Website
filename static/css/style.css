@@ -181,6 +181,10 @@ header h1 {
   padding: 10px;
 }
 
+.box :is(h1, h2, h3, h4) {
+  text-align: center;
+}
+
 #content {
   display: flex;
   flex-direction: column;
@@ -209,12 +213,8 @@ main {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-}
-
-main ul {
-  text-align: center;
-  list-style-type: none;
-  padding: 0;
+  text-align: left;
+  list-style-type: disc;
 }
 
 a {
@@ -398,39 +398,37 @@ blockquote p {
   margin-left: 8px;
 }
 
-ol {
-  margin-left: 8px;
-}
-
-ol li {
-  padding: 2px;
+#blog-content ul li,
+#blog-content ol li {
+  margin: 8px;
+  margin-left: 20px;
 }
 
 #table-of-contents {
-  text-align: left;
-  list-style-type: disc;
-  margin: 20px;
   margin-bottom: 0;
 }
 
-#table-of-contents li ul {
+#table-of-contents li {
+  margin: 4px;
+}
+
+#table-of-contents li ul li {
   text-align: left;
   list-style-type: circle;
-  margin-left: 20px;
 }
 
 #blog-header :is(h1, h4) {
   text-align: left;
-  margin: 10px;
-  margin-left: 6px;
-  margin-bottom: 0;
+  margin: 6px;
+  margin-left: 0;
+  padding-left: 6px;
 }
 
 #blog-content p {
   font-size: 18px;
 }
 
-#blog-content h1 {
+#blog-content h1, h2, h3, h4 {
   margin-left: 0;
   text-align: left;
 }
@@ -438,5 +436,13 @@ ol li {
 #blog-content :is(h1, h2, h3, h4, p, blockquote) {
   padding-left: 6px;
   padding-right: 6px;
+}
+
+#blog-content ul :has(del) {
+  list-style-type: circle;
+}
+
+#blog-content ul p {
+  margin: 0;
 }
 

@@ -18,13 +18,6 @@ This entry is also available on
 
 # Introduction
 
-```
-thing
-```
-```
-thing
-```
-
 [Seafile](https://www.seafile.com/) is a file-hosting software
 system with a simple web interface and client applications for file
 access. Seafile's functionality is similar to file-hosting services

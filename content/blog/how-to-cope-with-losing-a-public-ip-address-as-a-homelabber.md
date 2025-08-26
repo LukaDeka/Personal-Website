@@ -97,7 +97,7 @@ The main benefit of Netbird was the hugely simplified management of peers, how e
 
 # Conclusion
 
-Deploying Netbird on NixOS took some time since I couldn't find a guide for NixOS specifically, and had to go off reading documentation at many different places, reading source code, and experimenting. Eventually I managed to get it up and running, and decided to write [a guide for NixOS](https://lukadeka.com/blog/TODO) to spare potential headaches.
+Deploying Netbird on NixOS took some time since I couldn't find a guide for NixOS specifically, and had to go off reading documentation at many different places, reading source code, and experimenting. Eventually I managed to get it up and running, and decided to write [a guide for NixOS](https://lukadeka.com/blog/setting-up-netbird-on-nixos) to spare potential headaches.
 
 Netbird has been working great ever since the initial deployment.
 
