@@ -89,17 +89,15 @@ That being said, I bought a cheap VPS, and deployed the management server there.
 curl -fsSL https://pkgs.netbird.io/install.sh | sh
 ```
 and for NixOS, adding one line to my declarative config: 
-```nix
-services.netbird.enable = true;
+```nix, copy
+  services.netbird.enable = true;
 ```
 
 The main benefit of Netbird was the hugely simplified management of peers, how easy ACLs were to set up, how straightforward the setup was, and how it allows me to have a clear overview of the status of the peers. Also compared to the setup with WireGuard I had before, peer-to-peer connections are now possible instead of always relaying everything. Not to mention, I really like the design of the management interface (if you couldn't tell (and haven't seen how it looks like)).
 
 # Conclusion
 
-Deploying Netbird on NixOS took some time since I couldn't find a guide for NixOS specifically, and had to go off reading documentation at many different places, reading source code, and experimenting. Eventually I managed to get it up and running. I plan to write a blog about how I set it up to spare potential headaches.
-
-<!---TODO: write blog and insert link here: and decided to write [a guide for NixOS](https://lukadeka.com/blog/setting-up-netbird-on-nixos) to spare potential headaches. --->
+Deploying Netbird on NixOS took some time since I couldn't find a guide for NixOS specifically, and had to go off reading documentation at many different places, reading source code, and experimenting. Eventually I managed to get it up and running, and decided to write [a guide on setting up Netbird for NixOS](https://lukadeka.com/blog/setting-up-netbird-with-zitadel-on-nixos) to spare potential headaches.
 
 Netbird has been working great ever since the initial deployment.
 
