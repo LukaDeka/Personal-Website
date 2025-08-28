@@ -196,14 +196,31 @@ header h1 {
 }
 
 h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+  color: #7C8994;
+}
+
+h4 {
+  color: #7C8994;
+}
+
+h1, h2, h3, h4 {
   text-align: center;
   margin: 30px;
 }
 
-h2, h3, h4 {
-  text-align: center;
-  color: #7C8994;
+.block h1, h2, h3, h4 {
   margin: 15px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 main {
@@ -383,9 +400,8 @@ p code {
 }
 
 blockquote {
-  background: #25282D;
+  background: #32363D;
   border-left: 6px solid #F05252;
-  font-style: oblique;
   margin: 20px;
   margin-left: 30px;
   padding: 12px;
@@ -396,6 +412,7 @@ blockquote p {
   display: inline;
   margin: 4px;
   margin-left: 8px;
+  z-index: 0;
 }
 
 #blog-content ul li,
@@ -406,6 +423,7 @@ blockquote p {
 
 #table-of-contents {
   margin-bottom: 0;
+  padding: default;
 }
 
 #table-of-contents li {
