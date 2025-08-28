@@ -1,5 +1,8 @@
 {% extends "base.html" %}
-
+{%- block head %}
+{{ super() }}
+{{- macros_seo::seo(config=config, title="Home") }}
+{%- endblock head %}
 {% block content %}
 <div id="introduction-content">
   <h1>Welcome to Luka's self-hosted website!</h1>
