@@ -10,9 +10,9 @@
   {% for page in section.pages %}
     <div id="main-content">
       <div class="box">
-        <h2><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h2>
-          <h4>{{ page.date }} &middot; {{ page.reading_time }} minute read</h4>
-        <p>{{ page.description }}</p>
+        <h3><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h3>
+          <h5>{{ page.date }} &middot; {{ page.reading_time }} minute read</h5>
+        <p>{{ page.extra.long_description }}</p>
       </div>
     </div>
   {% endfor %}

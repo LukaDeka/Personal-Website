@@ -26,7 +26,7 @@ header {
   width: 100%;
 }
 
-header h1 {
+header h2 {
   white-space: nowrap;
   color: #D4D4D4;
   padding: auto;
@@ -72,7 +72,7 @@ header h1 {
 }
 
 @media (max-width: 920px) {
-  header h1 {
+  header h2 {
     margin-left: auto;
   }
 
@@ -181,9 +181,13 @@ header h1 {
   padding: 10px;
 }
 
-.box :is(h1, h2, h3, h4) {
+.box :is(h1, h2, h3, h4, h5) {
   text-align: center;
+  margin: 10px;
+  margin-left: 0;
+  margin-right: 0;
 }
+
 
 #content {
   display: flex;
@@ -195,32 +199,27 @@ header h1 {
   margin-right: auto;
 }
 
-h1 {
+h1, h2 {
   font-size: 32px;
 }
 
-h2 {
+h3 {
   font-size: 28px;
 }
 
-h3 {
+h4 {
   font-size: 24px;
   color: #7C8994;
 }
 
-h4 {
+h5 {
+  font-size: 16px;
   color: #7C8994;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   text-align: center;
   margin: 30px;
-}
-
-.block h1, h2, h3, h4 {
-  margin: 15px;
-  margin-left: 0;
-  margin-right: 0;
 }
 
 main {
@@ -281,7 +280,7 @@ hr {
   padding-right: 10px;
 }
 
-#links-container h2 {
+#links-container h3 {
   margin: 0;
   margin-bottom: 10px;
   text-align: left;
@@ -435,10 +434,11 @@ blockquote p {
   list-style-type: circle;
 }
 
-#blog-header :is(h1, h4) {
+#blog-header :is(h1, h5) {
   text-align: left;
-  margin: 6px;
+  margin: 14px;
   margin-left: 0;
+  margin-top: 0;
   padding-left: 6px;
 }
 
@@ -446,12 +446,12 @@ blockquote p {
   font-size: 18px;
 }
 
-#blog-content h1, h2, h3, h4 {
+#blog-content h1, h2, h3, h4, h5 {
   margin-left: 0;
   text-align: left;
 }
 
-#blog-content :is(h1, h2, h3, h4, p, blockquote) {
+#blog-content :is(h2, h3, h4, h5, p, blockquote) {
   padding-left: 6px;
   padding-right: 6px;
 }

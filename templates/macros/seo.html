@@ -10,6 +10,8 @@
 
 {% set profile_picture = resize_image(path=config.extra.favicon, width=32, height=32, op="fill", format="webp") %}
   <link rel="icon" href="{{ profile_picture.url }}" type="image/webp">
+{% set apple_touch_icon = resize_image(path=config.extra.favicon, width=180, height=180, op="fill", format="webp") %}
+  <link rel="apple-touch-icon" href="{{ apple_touch_icon.url }}">
 
 {%- if current_url %}
   {%- set page_url = current_url %}

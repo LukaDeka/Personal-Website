@@ -1,16 +1,20 @@
 +++
-title = "How to cope with losing a public IP address as a homelabber"
-description = "What happens to your services when your residential IP address gets put behind a CGNAT? What is NAT and how does it work? Here I answer these questions, and talk about how I designed my network."
+title = "How to cope with losing a public IP as a homelabber"
+description = "I talk about losing my public residential IP, how I overcame it, how NAT works, and my network design."
 date = 2025-08-24
+updated = 2025-08-31
+
+[extra]
+long_description = "What happens to your services when your residential IP address gets put behind a CGNAT? What is NAT and how does it work? Here I answer these questions, and talk about how I designed my network."
 +++
 
-# Preface
+## Preface
 
 This post explains how IP routing, NATs and CGNATs (or double-NATs) work, discusses different strategies for homelabbers to bypass CGNAT restrictions, and focuses on Netbird as a solution.
 
 This post is mainly intended for homelabbers, beginner network engineers, or curious system or DevOps administrators.
 
-# Introduction
+## Introduction
 
 I used to have my own residential IP address before June 2025, and exposing services to the internet was trivial. I only needed to punch holes through my router (i.e., port forwarding), and the services were accessible from anywhere.
 
@@ -28,7 +32,7 @@ So like hosts on the LAN can share a public IP address, different LANs on differ
 
 Since I couldn't forward ports on the CGNAT to point to my router, which would then point to my home-server, I needed a different approach than port forwarding.
 
-# Solution?
+## Solution?
 
 Since I was already using [WireGuard](https://www.wireguard.com/) to self-host VPNs to my home-servers, I decided to buy a cheap VPS, and "just use WireGuard", as many people recommended in forums, to expose my services.
 
@@ -42,7 +46,7 @@ Had the SSH connection worked, I still wouldn't've been satisfied. Every time I 
 
 While not sounding like a huge deal, I didn't want a suboptimal setup when I had heard of better alternatives, so I started investigating.
 
-# Considerations
+## Considerations
 
 Before I could consider my options to continue exposing services to the internet, I needed to write down my requirements for the software/service:
 
@@ -67,7 +71,7 @@ My second to final consideration was [Zrok](https://zrok.io/) which is based on 
 
 This is where I came across Netbird.
 
-# Introducing Netbird
+## Introducing Netbird
 
 Similar to Tailscale, [Netbird](https://netbird.io/) is a mesh VPN based on WireGuard that allows devices to connect to each other peer-to-peer or fall back to a relay if NAT traversal fails.
 
@@ -95,7 +99,7 @@ and for NixOS, adding one line to my declarative config:
 
 The main benefit of Netbird was the hugely simplified management of peers, how easy ACLs were to set up, how straightforward the setup was, and how it allows me to have a clear overview of the status of the peers. Also compared to the setup with WireGuard I had before, peer-to-peer connections are now possible instead of always relaying everything. Not to mention, I really like the design of the management interface (if you couldn't tell (and haven't seen how it looks like)).
 
-# Conclusion
+## Conclusion
 
 Deploying Netbird on NixOS took some time since I couldn't find a guide for NixOS specifically, and had to go off reading documentation at many different places, reading source code, and experimenting. Eventually I managed to get it up and running, and decided to write [a guide on setting up Netbird for NixOS](https://lukadeka.com/blog/setting-up-netbird-with-zitadel-on-nixos) to spare potential headaches.
 

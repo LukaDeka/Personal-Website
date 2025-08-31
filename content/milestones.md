@@ -1,10 +1,12 @@
 +++
-title = "Milestones"
-description = "Personal milestones: a list of cool things."
+title = "Personal Milestones"
+description = "Personal milestones: an ever-evolving list of personal goals and achievements."
 template = "milestones.html"
+date = 2025-08-28
+updated = 2025-08-31
 +++
 
-# Purpose
+## Purpose
 
 This is my ever-evolving list of personal milestones: goals I’ve reached, ones I’m working toward, and new ones I’ll continue to add over time. It’s a way to track growth, celebrate progress, and stay motivated along the journey.
 
@@ -12,11 +14,11 @@ I'm keeping my list public to keep myself accountable, and inspire others to sta
 
 This page was directly inspired by **Diogo Torres Correia** and his [Impossible List](https://diogotc.com/impossiblelist/).
 
-# The list
+## The list
 
 The list is split up into the following categories:
 
-## Homelab goals
+### Homelab goals
 * ~Deploy Nextcloud for myself and switch to it~ - November 2024
 * ~Set up monitoring for all my servers~ - December 2024, with Uptime Kuma, misc. scripts
 * ~Consolidate networking and VPNs with a mesh-VPN software~ - July 2025, [My blog about Netbird](https://lukadeka.com/blog/how-to-cope-with-losing-a-public-ip-address-as-a-homelabber/)
@@ -28,11 +30,11 @@ The list is split up into the following categories:
 * Deploy a self-hosted NVR for my parents' home surveilance system
 * Completely degoogle my life - (almost done, only Gmail is left)
 
-## Learning goals
+### Learning goals
 * Learn Rust and write a useful program in it
 * Learn Go and write a useful program in it
 
-## Career goals
+### Career goals
 * ~Get my first "blue collar" job~ - June 2024, Information Technology Support Specialist at Cura Unternehmensgruppe
 * ~Get an internship in software development~ - August 2024, Junior Backend Developer at Talkpal Inc.
 * ~Make my first contribution to open source software~ - April 2025, [My contributions to EMBArk](https://github.com/e-m-b-a/embark/commits/main/?author=LukaDeka&before=3534eaa39d7497263f8a3dd15b0abef14dcf19e0+35) in collaboration with Siemens Energy
@@ -41,7 +43,7 @@ The list is split up into the following categories:
 * Get a CCNA certificate
 * Finish university
 
-## General goals
+### General goals
 * Take up jogging
 * Get a driver's license
 * Start and maintain a useful open source project

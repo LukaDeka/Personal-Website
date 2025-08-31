@@ -1,10 +1,14 @@
 +++
 title = "Setting up Seafile on NixOS"
-description = "After I decided I wanted to set up Seafile, a file server, I found little documentation for NixOS. After experimenting with the options, and asking the maintainer for help, I finally got a working configuration, and decided to write a wiki entry as well to help future NixOS newcomers."
+description = "Here I talk about setting up Seafile, a high-performance file server, on NixOS declaratively. This blog post is provided as a manual."
 date = 2024-12-03
+updated = 2025-08-21
+
+[extra]
+long_description = "After I decided I wanted to set up Seafile, a file server, I found little documentation for NixOS. After experimenting with the options, and asking the maintainer for help, I finally got a working configuration, and decided to write a wiki entry as well to help future NixOS newcomers."
 +++
 
-# Preface
+## Preface
 After I decided I wanted to set up Seafile, a file server, I found little
 documentation for NixOS.
 
@@ -16,7 +20,7 @@ This entry is also available on
 [wiki.nixos.org](https://wiki.nixos.org/wiki/Seafile) and
 [nixos.wiki](https://nixos.wiki/wiki/Seafile).
 
-# Introduction
+## Introduction
 
 [Seafile](https://www.seafile.com/) is a file-hosting software
 system with a simple web interface and client applications for file
@@ -26,7 +30,7 @@ such as Dropbox and Google Drive.
 As opposed to [Nextcloud](https://nextcloud.com/), Seafile offers simpler
 user administration and better file-server performance.
 
-# Setup
+## Setup
 Minimal configuration of Seafile:
 ```nix, copy
   services.seafile = {
@@ -78,7 +82,7 @@ Use nginx to serve Seafile from a unix socket:
   };
 ```
 
-# Additional configuration
+## Additional configuration
 ```nix, copy
   services.seafile = {
     # ...
@@ -109,7 +113,7 @@ appropriate permissions, `chown -R seafile:seafile` it and set:
   };
 ```
 
-# Troubleshooting
+## Troubleshooting
 The `initialAdminPassword` is set only once when the server is first
 initialized. Any changes to it afterward will have no effect on it. If
 you cannot log in for the first time, delete `/var/lib/seafile/data`,

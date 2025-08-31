@@ -1,21 +1,25 @@
 +++
 title = "Setting up Netbird with Zitadel on NixOS"
-description = "Deploying Netbird's management server on NixOS proved particularly difficult since no step-by-step guide was provided for NixOS. I had to go off reading documentation at many different places, including source code, and experimenting. Eventually, I was able to get a working setup after some trial and error, and debugging."
+description = "Here I explain in detail how to set up Netbird's management server with NixOS declaratively. This blog post is provided as a manual."
 date = 2025-08-28
+updated = 2025-08-31
+
+[extra]
+long_description = "Deploying Netbird's management server on NixOS proved particularly difficult since no step-by-step guide was provided for NixOS. I had to go off reading documentation at many different places, including source code, and experimenting. Eventually, I was able to get a working setup after some trial and error, and debugging."
 +++
 
 
-# Preface
+## Preface
 
 Deploying Netbird's management server on NixOS proved particularly difficult since no step-by-step guide was provided for NixOS. I had to piece things together by reading documentation from many different documentation sources, including source code, and experimenting.
 
 Since the options at [search.nixos.org](<https://search.nixos.org/options?channel=unstable&>) were well documented, I was able to get a working setup after some trial and error, and debugging.
 
-# Introduction
+## Introduction
 
 [NetBird](https://netbird.io/) is an open-source VPN management platform built on top of WireGuard making it easy to create secure private networks for your organization or home.
 
-# Setup
+## Setup
 
 Netbird requires an Identity Provider for authentication/authorization. The supported self-hosted options are:
 
@@ -23,9 +27,9 @@ Netbird requires an Identity Provider for authentication/authorization. The supp
 - Keycloak
 - Authentik
 
-## Zitadel
+### Zitadel
 
-### Configuration
+#### Configuration
 
 Here's an example config for Zitadel, along with its database:
 
@@ -103,7 +107,7 @@ in
 }
 ```
 
-### Environment variables
+#### Environment variables
 
 Generate the `master_key` with:
 
@@ -156,7 +160,7 @@ POSTGRES_PASSWORD=set-the-same-password-as-in-settings
 POSTGRES_DB=postgres
 ```
 
-### Registration
+#### Registration
 
 Afterward, log in with your `Admin` account at `auth.example.com`, and follow Netbird's documentation on how to configure Zitadel [here](<https://docs.netbird.io/selfhosted/identity-providers#zitadel>).
 
@@ -166,7 +170,7 @@ Put the `ClientSecret` from Zitadel in the `client_secret` file, and hold on to 
 
 > The `Client ID` is *not* a secret so it's okay to hardcode it in the NixOS configuration.
 
-## Netbird
+### Netbird
 
 Afterward, set up Netbird:
 
@@ -299,7 +303,7 @@ in
 }
 ```
 
-### Environment files
+#### Environment files
 
 Generate the `turn_password` and `data_store_encryption_key` with:
 
@@ -347,7 +351,7 @@ TURN_MIN_PORT=40000
 TURN_MAX_PORT=40050
 ```
 
-### Cloud providers
+#### Cloud providers
 
 Many cloud providers like Hetzner Cloud use stateless firewalls (since they're cheaper to run than SPI firewalls). These can interfere with Netbird's operation.
 
@@ -362,7 +366,7 @@ sudo cat /proc/sys/net/ipv4/ip_local_port_range
 
 See more details [here](https://docs.netbird.io/selfhosted/selfhosted-guide#advanced-additional-configurations-for-cloud-providers).
 
-# Additional configuration
+## Additional configuration
 
 To enable the Netbird client, set:
 
@@ -370,15 +374,15 @@ To enable the Netbird client, set:
   services.netbird.enable = true;
 ```
 
-# Troubleshooting
+## Troubleshooting
 
-## Setup issues
+### Setup issues
 
 The generated configuration for the management interface is stored in `/var/lib/netbird-mgmt/management.json`. Verify this file if you suspect the environment variables aren't being applied properly, or to check if you're correctly overriding [the defaults](<https://search.nixos.org/options?channel=unstable&show=services.netbird.server.management.settings&query=services.netbird.server.management.settings>) with `services.netbird.server.management.settings`.
 
 You can check if the TURN/STUN and Relay servers are working properly with the online tester [Trickle ICE](<https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/>). A simple guide is provided [here](https://docs.netbird.io/selfhosted/troubleshooting) by Netbird.
 
-## Client issues
+### Client issues
 
 Run `netbird status -d` to check the details of the client as well as available relays. This also shows the connection status with other peers.
 
