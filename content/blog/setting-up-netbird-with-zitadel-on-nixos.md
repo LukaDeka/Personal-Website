@@ -6,6 +6,7 @@ updated = 2025-08-31
 
 [extra]
 long_description = "Deploying Netbird's management server on NixOS proved particularly difficult since no step-by-step guide was provided for NixOS. I had to go off reading documentation at many different places, including source code, and experimenting. Eventually, I was able to get a working setup after some trial and error, and debugging."
+static_thumbnail = "https://lukadeka.com/images/setting-up-netbird-with-zitadel-on-nixos.png"
 +++
 
 

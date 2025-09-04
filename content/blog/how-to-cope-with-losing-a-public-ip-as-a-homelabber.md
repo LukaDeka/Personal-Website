@@ -2,10 +2,11 @@
 title = "How to cope with losing a public IP as a homelabber"
 description = "I talk about losing my public residential IP, how I overcame it, how NAT works, and my network design."
 date = 2025-08-24
-updated = 2025-08-31
+updated = 2025-09-04
 
 [extra]
 long_description = "What happens to your services when your residential IP address gets put behind a CGNAT? What is NAT and how does it work? Here I answer these questions, and talk about how I designed my network."
+static_thumbnail = "https://lukadeka.com/images/how-to-cope-with-losing-a-public-ip-as-a-homelabber.png"
 +++
 
 ## Preface

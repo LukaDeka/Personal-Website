@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 {%- block head %}
 {{ super() }}
-{{- macros_seo::seo(config=config, title="Blogs") }}
+{{- macros_seo::seo(
+  config=config,
+  title="Blogs",
+  description="Welcome to my blog! Here I discuss all things relating tech, Linux, networking, DevOps, as well as my hobbies.",
+  thumbnail="https://lukadeka.com/images/blog-og.png"
+) }}
 {%- endblock head %}
 
 {% block content %}

@@ -6,6 +6,7 @@ updated = 2025-08-21
 
 [extra]
 long_description = "After I decided I wanted to set up Seafile, a file server, I found little documentation for NixOS. After experimenting with the options, and asking the maintainer for help, I finally got a working configuration, and decided to write a wiki entry as well to help future NixOS newcomers."
+static_thumbnail = "https://lukadeka.com/images/setting-up-seafile-on-nixos.png"
 +++
 
 ## Preface

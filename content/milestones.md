@@ -1,9 +1,9 @@
 +++
 title = "Personal Milestones"
-description = "Personal milestones: an ever-evolving list of personal goals and achievements."
+description = "An ever-evolving list of personal goals and achievements: a way to track my achievements and goals."
 template = "milestones.html"
 date = 2025-08-28
-updated = 2025-08-31
+updated = 2025-09-04
 +++
 
 ## Purpose
@@ -21,14 +21,14 @@ The list is split up into the following categories:
 ### Homelab goals
 * ~Deploy Nextcloud for myself and switch to it~ - November 2024
 * ~Set up monitoring for all my servers~ - December 2024, with Uptime Kuma, misc. scripts
-* ~Consolidate networking and VPNs with a mesh-VPN software~ - July 2025, [My blog about Netbird](https://lukadeka.com/blog/how-to-cope-with-losing-a-public-ip-address-as-a-homelabber/)
+* ~Consolidate networking and VPNs with a mesh-VPN software~ - July 2025, [My blog about Netbird](https://lukadeka.com/blog/how-to-cope-with-losing-a-public-ip-as-a-homelabber/)
 * ~Deploy an email server~ - July 2025, [Commit](https://github.com/LukaDeka/NixOS/commit/ee4608a58742313152c98fd289a11a021f9bb835)
 * ~Deploy Nextcloud for my parents~ - August 2025, [Commit](https://github.com/LukaDeka/NixOS/commit/e193a2eabb75fef2083b84c2c1b188ee4a3d7b99)
 * ~Set up a 3-2-1 backup strategy for myself and my parents~ - August 2025, [Commit](https://github.com/LukaDeka/NixOS/commit/6ed0ca638795adc6f8edac6a234bbd37b676c50f)
 * ~Start and publish a personal website and blog~ - August 2025, [Repository](https://github.com/LukaDeka/Personal-Website)
 * Replace my laptop home server with more capable hardware
 * Deploy a self-hosted NVR for my parents' home surveilance system
-* Completely degoogle my life - (almost done, only Gmail is left)
+* Completely degoogle my life - August 2025, replaced Drive, Media storage, email, search, etc.
 
 ### Learning goals
 * Learn Rust and write a useful program in it

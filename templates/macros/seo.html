@@ -1,4 +1,4 @@
-{%- macro seo( config, title="", description="", is_404=false ) %}
+{%- macro seo( config, title="", description="", thumbnail="", is_404=false ) %}
 
 {%- if is_404 -%}
   <meta name="robots" content="noindex, follow" />
@@ -58,7 +58,17 @@
 {%- if not is_404 %}
 
 {#- SEO MEDIA START #}
-{%- if page.extra.thumbnail %}
+{%- if thumbnail %}
+  <meta name="twitter:card" content="summary_large_image" />
+  {%- if thumbnail is matching("^http[s]?://") %}
+  <meta name="twitter:image" content="{{ thumbnail }}" />
+  <meta property="og:image" content="{{ thumbnail }}" />
+  {%- else %}
+  <meta name="twitter:image" content="{{ get_url(path=thumbnail, trailing_slash=false) }}" />
+  <meta property="og:image" content="{{ get_url(path=thumbnail, trailing_slash=false) }}" />
+  {%- endif %}
+
+{%- elif page.extra.thumbnail %}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="{{ get_url(path=page.path ~ page.extra.thumbnail, trailing_slash=false) }}" />
   <meta property="og:image" content="{{ get_url(path=page.path ~ page.extra.thumbnail, trailing_slash=false) }}" />
