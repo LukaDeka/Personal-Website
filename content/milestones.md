@@ -1,6 +1,6 @@
 +++
 title = "Personal Milestones"
-description = "An ever-evolving list of personal goals and achievements: a way to track my achievements and goals."
+description = "This is my ever-evolving list of personal milestones: goals I’ve reached, ones I’m working toward, and new ones I’ll continue to add over time."
 template = "milestones.html"
 date = 2025-08-28
 updated = 2025-09-04
