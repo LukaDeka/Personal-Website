@@ -29,10 +29,10 @@ header {
 header h2 {
   white-space: nowrap;
   color: #D4D4D4;
-  padding: auto;
   margin: auto;
   margin-left: 25px;
   font-size: 24px;
+  padding-right: 32px;
 }
 
 #menu-links {
@@ -295,7 +295,17 @@ hr {
     max-width: 1200px;
     gap: 30px;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+  }
+
+  #links-container div ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #links-container div ul li {
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 
@@ -443,11 +453,6 @@ blockquote p {
 #blog-content p {
   font-size: 18px;
 }
-
-/* #blog-content h1, h2, h3, h4, h5 { */
-/*   margin-left: 0; */
-/*   text-align: left; */
-/* } */
 
 #blog-content :is(h2, h3, h4, h5, p, blockquote) {
   padding-left: 6px;
