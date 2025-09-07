@@ -11,15 +11,13 @@
 
 {% block content %}
 <h1 class="title">{{ section.title }}</h1>
-<ul>
+<div id="main-content">
   {% for page in section.pages %}
-    <div id="main-content">
-      <div class="box">
-        <h3><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h3>
-          <h5>{{ page.date }} &middot; {{ page.reading_time }} minute read</h5>
-        <p>{{ page.extra.long_description }}</p>
-      </div>
-    </div>
+  <div class="box">
+    <h3><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h3>
+      <h5>{{ page.date }} &middot; {{ page.reading_time }} minute read</h5>
+    <p>{{ page.extra.long_description }}</p>
+  </div>
   {% endfor %}
-</ul>
+</div>
 {% endblock content %}

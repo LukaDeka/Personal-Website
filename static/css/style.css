@@ -30,9 +30,7 @@ header h2 {
   white-space: nowrap;
   color: #D4D4D4;
   padding: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: auto;
+  margin: auto;
   margin-left: 25px;
   font-size: 24px;
 }
@@ -446,14 +444,16 @@ blockquote p {
   font-size: 18px;
 }
 
-#blog-content h1, h2, h3, h4, h5 {
-  margin-left: 0;
-  text-align: left;
-}
+/* #blog-content h1, h2, h3, h4, h5 { */
+/*   margin-left: 0; */
+/*   text-align: left; */
+/* } */
 
 #blog-content :is(h2, h3, h4, h5, p, blockquote) {
   padding-left: 6px;
   padding-right: 6px;
+  text-align: left;
+  margin-left: 0;
 }
 
 #blog-content ul :has(del) {
