@@ -3,7 +3,7 @@ title = "Personal Milestones"
 description = "This is my ever-evolving list of personal milestones: goals I’ve reached, ones I’m working toward, and new ones I’ll continue to add over time."
 template = "milestones.html"
 date = 2025-08-28
-updated = 2025-10-14
+updated = 2025-09-19
 +++
 
 ## Purpose
@@ -33,6 +33,7 @@ The list is split up into the following categories:
 ### Learning goals
 * Learn Rust and write a useful program in it
 * Learn Go and write a useful program in it
+* Learn Elixir and write a useful program in it
 
 ### Career goals
 * ~Get my first "blue collar" job~ - June 2024, Information Technology Support Specialist at Cura Unternehmensgruppe
@@ -44,7 +45,8 @@ The list is split up into the following categories:
 * Finish university
 
 ### General goals
+* Enter a FIDE-rated chess tournament
 * Take up jogging
 * Get a driver's license
-* Start and maintain a useful open source project
+* Start and maintain a useful open-source project
 
