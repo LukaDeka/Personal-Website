@@ -49,8 +49,8 @@ I also argued that FP is very useful when a language rewrite is necessary, and w
 <a target="_blank" rel="noopener noreferrer dofollow" href="/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf">Click here</a> to open the PDF in a new tab.
 
 <object data="/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf" type="application/pdf" width="100%" height="700px">
-    <embed src="/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf">Download PDF</a>.</p>
+    <embed src="/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf" style="height: 0;">
+        <p style="padding-bottom: 22px;">This browser does not support PDFs. Please try <a target="_blank" rel="noopener noreferrer dofollow" href="/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf">opening it in a new tab</a>, or <a href="/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf">download the PDF to view it</a>.</p>
     </embed>
 </object>
 
