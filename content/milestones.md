@@ -3,7 +3,7 @@ title = "Personal Milestones"
 description = "This is my ever-evolving list of personal milestones: goals I’ve reached, ones I’m working toward, and new ones I’ll continue to add over time."
 template = "milestones.html"
 date = 2025-08-28
-updated = 2025-09-04
+updated = 2025-10-14
 +++
 
 ## Purpose
@@ -26,9 +26,9 @@ The list is split up into the following categories:
 * ~Deploy Nextcloud for my parents~ - August 2025, [Commit](https://github.com/LukaDeka/NixOS/commit/e193a2eabb75fef2083b84c2c1b188ee4a3d7b99)
 * ~Set up a 3-2-1 backup strategy for myself and my parents~ - August 2025, [Commit](https://github.com/LukaDeka/NixOS/commit/6ed0ca638795adc6f8edac6a234bbd37b676c50f)
 * ~Start and publish a personal website and blog~ - August 2025, [Repository](https://github.com/LukaDeka/Personal-Website)
-* Replace my laptop home server with more capable hardware
+* ~Completely degoogle my life~ - August 2025, replaced Drive, Media storage, email, search, etc.
+* ~Replace my laptop home server with more capable hardware~ - September 2025
 * Deploy a self-hosted NVR for my parents' home surveilance system
-* Completely degoogle my life - August 2025, replaced Drive, Media storage, email, search, etc.
 
 ### Learning goals
 * Learn Rust and write a useful program in it
