@@ -48,8 +48,8 @@ I also argued that FP is very useful when a language rewrite is necessary, and w
 
 Click here to<a target="_blank" rel="noopener noreferrer dofollow" href="/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf">open the PDF in a new tab</a>.
 
-<object data="/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf" type="application/pdf" width="100%" height="700px" allow="fullscreen">My research paper "Functional paradigms in LISP and its contributions to reliable, maintainable software"</object>
-  <embed src="/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf" style="height: 0;" allow="fullscreen">
+<object data="/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf" type="application/pdf" aria-label="My research paper 'Functional paradigms in LISP and its contributions to reliable, maintainable software'" width="100%" height="700px">
+  <embed src="/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf" style="height: 0;">
     <p style="padding-bottom: 22px;">This browser does not support PDFs. Please try <a target="_blank" rel="noopener noreferrer dofollow" href="/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf">opening it in a new tab</a>, or <a href="/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf" download="Functional paradigms in LISP and its contribution to reliable, maintainable software.pdf">download the PDF to view it</a>.</p>
   </embed>
 </object>
