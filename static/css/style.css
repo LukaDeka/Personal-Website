@@ -485,7 +485,8 @@ blockquote p {
 }
 
 code span[style*="color:#5f6364;"] {
-  color: #7C8994 !important;
+  /* color: #7C8994 !important; */
+  color: #94A0A3 !important;
   font-style: italic;
 }
 
