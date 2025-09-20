@@ -2,7 +2,7 @@
 title = "Setting up Netbird with Zitadel on NixOS"
 description = "Here I explain in detail how to set up Netbird's management server with NixOS declaratively. This blog post is provided as a manual."
 date = 2025-08-28
-updated = 2025-08-31
+updated = 2025-09-20
 
 [extra]
 long_description = "Deploying Netbird's management server on NixOS proved particularly difficult since no step-by-step guide was provided for NixOS. I had to go off reading documentation at many different places, including source code, and experimenting. Eventually, I was able to get a working setup after some trial and error, and debugging."
@@ -163,7 +163,7 @@ POSTGRES_DB=postgres
 
 #### Registration
 
-Afterward, log in with your `Admin` account at `auth.example.com`, and follow Netbird's documentation on how to configure Zitadel [here](<https://docs.netbird.io/selfhosted/identity-providers#zitadel>).
+Afterward, log in with your `Admin` account at `auth.example.com`, and follow Netbird's documentation on [how to configure Zitadel](<https://docs.netbird.io/selfhosted/identity-providers#zitadel>).
 
 > Make sure to put `netbird.example.com` as the domain in the **Redirect Settings** and not `auth.example.com`.
 
@@ -364,8 +364,7 @@ To see which ports you need to open, run:
 sudo cat /proc/sys/net/ipv4/ip_local_port_range
 ```
 
-
-See more details [here](https://docs.netbird.io/selfhosted/selfhosted-guide#advanced-additional-configurations-for-cloud-providers).
+See [additional configurations for cloud providers](https://docs.netbird.io/selfhosted/selfhosted-guide#advanced-additional-configurations-for-cloud-providers).
 
 ## Additional configuration
 
@@ -381,7 +380,7 @@ To enable the Netbird client, set:
 
 The generated configuration for the management interface is stored in `/var/lib/netbird-mgmt/management.json`. Verify this file if you suspect the environment variables aren't being applied properly, or to check if you're correctly overriding [the defaults](<https://search.nixos.org/options?channel=unstable&show=services.netbird.server.management.settings&query=services.netbird.server.management.settings>) with `services.netbird.server.management.settings`.
 
-You can check if the TURN/STUN and Relay servers are working properly with the online tester [Trickle ICE](<https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/>). A simple guide is provided [here](https://docs.netbird.io/selfhosted/troubleshooting) by Netbird.
+You can check if the TURN/STUN and Relay servers are working properly with the online tester [Trickle ICE](<https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/>). A [simple guide for troubleshooting](https://docs.netbird.io/selfhosted/troubleshooting) is provided here by Netbird.
 
 ### Client issues
 

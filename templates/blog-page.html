@@ -6,25 +6,23 @@
 
 {% block content %}
 <div id="blog-header">
-  <h1 class="title">
-    {{ page.title }}
-  </h1>
-  <h5>{{ page.date }} &middot; {{ page.reading_time }} minute read</h5>
+  <h1 class="title">{{ page.title }}</h1>
+  <div class="date-subtitle">{{ page.date }} &middot; {{ page.reading_time }} minute read</div>
   {% if page.toc %}
-    <ul id="table-of-contents">
-      {% for h2 in page.toc %}
-        <li>
-          <strong><a href="{{ h2.permalink | safe }}">{{ h2.title }}</a></strong>
-          {% if h2.children %}
-            <ul>
-              {% for h3 in h2.children %}
-                <strong><li><a href="{{ h3.permalink | safe }}">{{ h3.title }}</a></li></strong>
-              {% endfor %}
-            </ul>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
+  <ul id="table-of-contents">
+    {% for h2 in page.toc %}
+    <li>
+      <a href="{{ h2.permalink | safe }}"><b>{{ h2.title }}</b></a>
+      {% if h2.children %}
+      <ul>
+        {% for h3 in h2.children %}
+        <li><b><a href="{{ h3.permalink | safe }}">{{ h3.title }}</a></b></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
   {% endif %}
 </div>
 <div id="blog-content">
