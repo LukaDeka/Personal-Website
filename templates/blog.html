@@ -14,7 +14,7 @@
 <div id="main-content">
   {% for page in section.pages %}
   <div class="box">
-    <h3><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h3>
+    <h2><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h2>
     <div class="date-subtitle">{{ page.date }} &middot; {{ page.reading_time }} minute read</div>
     <p>{{ page.extra.long_description }}</p>
   </div>

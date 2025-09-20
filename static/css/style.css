@@ -189,8 +189,9 @@ header h2 {
   padding: 10px;
 }
 
-.box :is(h3, h4) {
+.box :is(h2, h3) {
   text-align: center;
+  font-size: 28px;
   margin: 10px;
   margin-left: 0;
   margin-right: 0;
@@ -201,11 +202,6 @@ header h2 {
   font-size: 16px;
   color: #7C8994;
   font-weight: bold;
-}
-
-.box h4 {
-  font-size: 16px;
-  color: #7C8994;
 }
 
 h1, h2 {
