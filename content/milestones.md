@@ -3,7 +3,7 @@ title = "Personal Milestones"
 description = "This is my ever-evolving list of personal milestones: goals I’ve reached, ones I’m working toward, and new ones I’ll continue to add over time."
 template = "milestones.html"
 date = 2025-08-28
-updated = 2025-09-19
+updated = 2025-09-21
 +++
 
 ## Purpose
@@ -30,11 +30,6 @@ The list is split up into the following categories:
 * ~Replace my laptop home server with more capable hardware~ - September 2025
 * Deploy a self-hosted NVR for my parents' home surveilance system
 
-### Learning goals
-* Learn Rust and write a useful program in it
-* Learn Go and write a useful program in it
-* Learn Elixir and write a useful program in it
-
 ### Career goals
 * ~Get my first "blue collar" job~ - June 2024, Information Technology Support Specialist at Cura Unternehmensgruppe
 * ~Get an internship in software development~ - August 2024, Junior Backend Developer at Talkpal Inc.
@@ -44,9 +39,17 @@ The list is split up into the following categories:
 * Get a CCNA certificate
 * Finish university
 
+### Learning goals
+* Learn Rust and write a useful program in it
+* Learn Go and write a useful program in it
+* Learn Elixir and write a useful program in it
+
 ### General goals
 * Enter a FIDE-rated chess tournament
 * Take up jogging
 * Get a driver's license
 * Start and maintain a useful open-source project
+
+### Smaller miscellaneous goals (for fun)
+* Have my [research paper](https://lukadeka.com/blog/my-research-paper-on-functional-paradigms-and-lisp/) cited by someone
 
