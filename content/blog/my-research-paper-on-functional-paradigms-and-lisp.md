@@ -7,6 +7,7 @@ updated = 2025-09-19
 [extra]
 long_description = "Here I talk about the seminar Open Distributed Systems at the Technical University Berlin, present my experiences researching Lisps, Functional Paradigms, and their uses in enterprise environments, and present my research paper on these topics."
 static_thumbnail = "https://lukadeka.com/images/my-research-paper-on-functional-paradigms-and-lisp.png"
+additional_sitemap = "https://lukadeka.com/resources/functional-paradigms-and-lisp.pdf"
 +++
 
 ## Preface
@@ -33,25 +34,26 @@ All the while having 4 classes in total on how to do research, write a good rese
 
 ## Topic
 
-I picked the paper [Recursive functions of symbolic expressions and their computation by machine, part I](https://www-formal.stanford.edu/jmc/recursive.pdf) by [John McCarthy](https://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)). I chose this topic because my friend was recommending Lisps, and I wanted to learn more about Functional Programming (FP) in general.  
+I picked the paper [Recursive functions of symbolic expressions and their computation by machine, part I](https://www-formal.stanford.edu/jmc/recursive.pdf) by [John McCarthy](https://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)). I chose this topic because my friend was recommending Lisps, and I wanted to learn more about Functional Programming (FP) in general.
 
-I ended up phrasing my research question and topic like this:  
+I ended up phrasing my title like this:
+> "*Functional paradigms in LISP and its contribution to reliable, maintainable software*"
+
+And my research question like this:
 > "*In what way do the functional programming paradigms introduced in LISP contribute to the development of more reliable and maintainable software?*"
 
 I mostly talked about the benefits of FP over imperative, how it supports Test-Driven Development (TDD), and what the benefits of enforcing static types as well as pure functions has.
-
 
 I also argued that FP is very useful when a language rewrite is necessary, and when the priorities shift to codebase maintainability, readability, and minimizing runtime errors - since a lack thereof accounts to over 50% of project costs in practice:
 > "*...a common misconception among beginner software developers is that designing and writing efficient programs is the most important task of the job. In practice, incorrect, unreadable, and hard to maintain software accounts to over fifty percent of the project costs. Tremendous resources could be saved if the focus were shifted to readability, reliability and correctness, but the reality shows that most businesses favor rapid development and software that just works in the present.*"
 
 ## The paper
 
-Click here to <a target="_blank" rel="noopener noreferrer dofollow" href="/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf">open the PDF in a new tab</a>.
+Click here to <a target="_blank" rel="noopener noreferrer dofollow" href="/resources/functional-paradigms-and-lisp.pdf">open the PDF in a new tab</a>.
 
-<object data="/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf" type="application/pdf" aria-label="My research paper 'Functional paradigms in LISP and its contributions to reliable, maintainable software'" width="100%" height="700px" allow="fullscreen">
-  <p>This browser does not support PDFs. Please try <a target="_blank" rel="noopener noreferrer dofollow" href="/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf">opening it in a new tab</a>, or <a href="/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf" download="Functional paradigms in LISP and its contribution to reliable, maintainable software.pdf">download the PDF to view it</a>.</p>
+<object data="/resources/functional-paradigms-and-lisp.pdf" type="application/pdf" aria-label="My research paper 'Functional paradigms in LISP and its contributions to reliable, maintainable software'" width="100%" height="700px" allow="fullscreen">
+  <p>This browser does not support PDFs. Please try <a target="_blank" rel="noopener noreferrer dofollow" href="/resources/functional-paradigms-and-lisp.pdf">opening it in a new tab</a>, or <a href="/resources/functional-paradigms-and-lisp.pdf" download="Functional paradigms and LISP.pdf">download the PDF to view it</a>.</p>
 </object>
-
 
 ## Shortcomings
 
@@ -69,10 +71,10 @@ Overall, I learned a lot about FP and the history of LISP by doing the research,
 If you'd like to cite my paper, here is the BibTeX:
 
 ```bib, copy
-@misc{MaintainableFunctionalSoftware,
+@misc{FunctionalParadigmsAndLisp,
   author = {Luka Dekanozishvili},
   title = {Functional paradigms in LISP and its contribution to reliable, maintainable software},
-  howpublished = {\url{https://lukadeka.com/resources/functional-paradigms-in-lisp-and-its-contribution-to-reliable-maintainable-software.pdf}},
+  howpublished = {\url{https://lukadeka.com/resources/functional-paradigms-and-lisp.pdf}},
   email = {research@lukadeka.com},
   school = {Technical University Berlin},
   address = {Berlin, DE},
