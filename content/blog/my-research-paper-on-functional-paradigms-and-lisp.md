@@ -2,7 +2,7 @@
 title = "My research paper on Functional Paradigms and LISP"
 description = "I talk about the seminar Open Distributed Systems at my uni, and present my research paper I had to write for it."
 date = 2025-09-19
-updated = 2025-09-19
+updated = 2025-10-01
 
 [extra]
 long_description = "Here I talk about the seminar Open Distributed Systems at the Technical University Berlin, present my experiences researching Lisps, Functional Paradigms, and their uses in enterprise environments, and present my research paper on these topics."
@@ -79,7 +79,7 @@ If you'd like to cite my paper, here is the BibTeX:
   school = {Technical University Berlin},
   address = {Berlin, DE},
   year = {2025},
-  month = {October}
+  month = {September}
 }
 ```
 
