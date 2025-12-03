@@ -34,13 +34,13 @@ The list is split up into the following categories:
 * ~Get my first "blue collar" job~ - June 2024, Information Technology Support Specialist at Cura Unternehmensgruppe
 * ~Get an internship in software development~ - August 2024, Junior Backend Developer at Talkpal Inc.
 * ~Make my first contribution to open source software~ - April 2025, [My contributions to EMBArk](https://github.com/e-m-b-a/embark/commits/main/?author=LukaDeka&before=3534eaa39d7497263f8a3dd15b0abef14dcf19e0+35) in collaboration with Siemens Energy
+* ~Get a part-time job in DevOps~ - December 2025, Devops engineer at Dilax Intercom
 * Get a part-time job in software development
-* Get a part-time job in DevOps
 * Get a CCNA certificate
 * Finish university
 
 ### Learning goals
-* Learn Rust and write a useful program in it
+* ~Learn Rust and write a useful program in it~ - December 2025, work in progress!
 * Learn Go and write a useful program in it
 * Learn Elixir and write a useful program in it
 
