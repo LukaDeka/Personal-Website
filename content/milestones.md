@@ -3,7 +3,7 @@ title = "Personal Milestones"
 description = "This is my ever-evolving list of personal milestones: goals I’ve reached, ones I’m working toward, and new ones I’ll continue to add over time."
 template = "milestones.html"
 date = 2025-08-28
-updated = 2025-09-21
+updated = 2025-12-15
 +++
 
 ## Purpose
@@ -12,7 +12,7 @@ This is my ever-evolving list of personal milestones: goals I’ve reached, ones
 
 I'm keeping my list public to keep myself accountable, and inspire others to start their own list as well.
 
-This page was directly inspired by **Diogo Torres Correia** and his [Impossible List](https://diogotc.com/impossiblelist/).
+This page was inspired by **Diogo Torres Correia** and his [Impossible List](https://diogotc.com/impossiblelist/).
 
 ## The list
 
@@ -34,7 +34,7 @@ The list is split up into the following categories:
 * ~Get my first "blue collar" job~ - June 2024, Information Technology Support Specialist at Cura Unternehmensgruppe
 * ~Get an internship in software development~ - August 2024, Junior Backend Developer at Talkpal Inc.
 * ~Make my first contribution to open source software~ - April 2025, [My contributions to EMBArk](https://github.com/e-m-b-a/embark/commits/main/?author=LukaDeka&before=3534eaa39d7497263f8a3dd15b0abef14dcf19e0+35) in collaboration with Siemens Energy
-* ~Get a part-time job in DevOps~ - December 2025, Devops engineer at Dilax Intercom
+* ~Get a part-time job in DevOps~ - December 2025, Devops engineer at Dilax Intelcom
 * Get a part-time job in software development
 * Get a CCNA certificate
 * Finish university
