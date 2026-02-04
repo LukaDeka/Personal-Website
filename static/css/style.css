@@ -467,6 +467,7 @@ blockquote p {
 
 #blog-content p {
   font-size: 18px;
+  line-height: 27px;
 }
 
 #blog-content :is(h2, h3, h4, h5, p, blockquote) {
@@ -488,5 +489,12 @@ code span[style*="color:#5f6364;"] {
   /* color: #7C8994 !important; */
   color: #94A0A3 !important;
   font-style: italic;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
 }
 

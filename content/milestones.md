@@ -40,7 +40,7 @@ The list is split up into the following categories:
 * Finish university
 
 ### Learning goals
-* ~Learn Rust and write a useful program in it~ - December 2025, work in progress!
+* ~Learn Rust and write a useful program in it~ - December 2025, finished the backend for <a target="_blank" href="https://hexname.com">HexName</a> (check out [my blog introducing HexName](https://lukadeka.com/blog/introducing-hexname/))
 * Learn Go and write a useful program in it
 * Learn Elixir and write a useful program in it
 

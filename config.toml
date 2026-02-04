@@ -19,9 +19,6 @@ author = "Luka Dekanozishvili"
 # ]
 
 [markdown]
-highlight_code = true
-highlight_theme = "charcoal"
-
 # When set to "true", emoji aliases translated to their corresponding
 # Unicode emoji equivalent in the rendered Markdown files. (e.g.: :smile: => 😄)
 render_emoji = true
@@ -35,6 +32,12 @@ external_links_target_blank = true
 
 # Whether to set rel="noreferrer" for all external links
 external_links_no_referrer = true
+
+[markdown.highlighting]
+theme = "github-dark"
+
+# When set to "true", missing highlight languages are treated as errors. Defaults to false but recommended to set to true.
+error_on_missing_language = false
 
 [extra]
 long_title = "Luka Dekanozishvili"
