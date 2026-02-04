@@ -1,8 +1,8 @@
 +++
 title = "Introducing HexName - a free DNS service"
 description = "Here I talk about how I developed the entirety of HexName, the free service for domain registration with DNS/DDNS management."
-date = 2026-02-02
-updated = 2026-02-02
+date = 2026-02-04
+updated = 2026-02-04
 
 [extra]
 long_description = "When learning about homelabbing and DNS, I tested out many free DDNS services - none of which I'd recommend nowadays. Because of the lack of better alternatives, and for learning purposes, I decided to build a reliable, forever-free alternative I can confidently recommend to others. After 4.5 months, I finally finished the backend, frontend, and deployed my app to the public."
