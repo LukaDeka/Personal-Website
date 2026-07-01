@@ -362,8 +362,11 @@ code {
   z-index: 1;
   padding: 4px;
   font-family: "Courier New";
-  display: block;
   overflow: auto;
+}
+
+pre code {
+  display: block;
 }
 
 p code {
@@ -433,7 +436,7 @@ blockquote p {
 #blog-content ul li,
 #blog-content ol li {
   margin: 8px;
-  margin-left: 20px;
+  margin-left: 0;
 }
 
 #table-of-contents {
@@ -466,7 +469,6 @@ blockquote p {
 }
 
 #blog-content p {
-  font-size: 18px;
   line-height: 27px;
 }
 
