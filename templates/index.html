@@ -7,8 +7,7 @@
 <div id="introduction-content">
   <h1>Welcome to Luka's personal website!</h1>
   <p>
-    Here I talk about my experiences with tech, as well as present my career
-    path, education, projects, and hobbies.
+    Here I talk about my experiences with tech, as well as present my career path, projects, and hobbies.
   </p>
   <p>
     Check out my <a href="/blog/">blog</a>, as well as my
@@ -48,10 +47,12 @@
   <div class="box">
     <h3><a target="_blank" rel="noopener noreferrer nofollow" href="https://github.com/LukaDeka/NixOS">Server administration of network systems with NixOS</a></h3>
     <p>
-      Declarative configuration & administration of fault-tolerant servers with
-      Cloudflare, Mesh VPNs, nginx, ZFS, SSHFS, monitoring, cloud printing,
-      email server, and proxy. With a focus on IT security, reliability, and
-      best practices.
+      Here I'm managing infrastructure declaratively with reproducible deployments across machines, integrating Cloudflare,
+Netbird/Tailscale mesh VPNs, NAT/CGNAT traversal, ZFS storage, monitoring, and secrets management via sops.
+    <p>
+    </p>
+      I improved mail deliverability and security by operating a self-hosted mail server with SPF/DKIM/DMARC policies,
+MTA-STS, email reputation management, and DNS hardening
     </p>
     <p>
       This is currently my main hobby. Started in 2024, now I rely on many of
@@ -61,7 +62,7 @@
     </p>
     <p>
       With this, my journey to degoogle my life and rely less on external
-      services has been a success.
+      services started.
     </p>
   </div>
   <div class="box">
@@ -81,24 +82,24 @@
   </div>
   <h2>Career</h2>
   <div class="box">
-    <h3>DevOps Engineer – Dilax Intelcom</h3>
+    <h3>Infrastructure Software Engineer – Dilax Intelcom</h3>
     <p>
-      Deployment and maintenance of custom software systems on different clients,
-      development of a centralized monitoring system as well as enforcing
-      best-practices in the infrastructure. 
+      Designed and built a custom application-agnostic reverse-proxy embedded in a Java/Spring Boot app that routes requests to network-isolated sensors via URL-based rules, eliminating the need for 1000+ device-specific configurations while enforcing centralized authentication.
+    </p>
+    <p>
+      Built and operated deployment automation for 60+ Linux hosts, including SSH-based rollout tooling, improving infrastructure reliability and repeatability across production systems.
+    </p>
+    <p>
+      Implemented fleet-wide monitoring with Prometheus, Grafana, covering per-service state and proactive alerting.
     </p>
   </div>
   <div class="box">
     <h3>Junior Backend Engineer Internship – Talkpal Inc.</h3>
     <p>
-      Scrum-based backend development with NestJS & microservices: optimization
-      of Redis queues for email scheduling, endpoint conversion in Swagger,
-      debugging with PostgreSQL, etc.
+      Improved reliability of email scheduling services by optimizing Redis queues in a NestJS microservices backend while diagnosing and resolving PostgreSQL-related failures across API workflows.
     </p>
     <p>
-      Here I had first-hand experience in how mid to large teams operate. I
-      helped with bugfixes, modularized endpoints, updated the documentation,
-      and optimized Redis queue sizes of mails.
+      Improved maintainability of 20-30 NestJS API endpoints by refactoring large handlers into smaller service modules with clearer responsibilities and more testable boundaries.
     </p>
   </div>
   <div class="box">
@@ -109,15 +110,8 @@
       management, automation, and documentation in the IT field.
     </p>
     <p>
-      Here I gained invaluable people-skills, as well as further developed my
-      logical reasoning. Problems in IT seem often unexplainable, but the
-      methodology of fixing it is often quite similar.
-    </p>
-    <p>
-      I also worked on repairing/repurposing decommissioned hardware as well as
-      automating some chores my colleagues had to do e.g. user account creation
-      using a PowerShell script that reorders a CSV, and creates new fields
-      based on hashmaps.
+      I gained invaluable people-skills, as well as further developed my
+      logical reasoning.
     </p>
   </div>
 </div>
