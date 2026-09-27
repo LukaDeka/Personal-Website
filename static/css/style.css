@@ -204,6 +204,24 @@ header h2 {
   font-weight: bold;
 }
 
+#atom-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 16px;
+  color: #F68330;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#atom-link:hover {
+  color: #C85C1C;
+}
+
+#atom-link img {
+  display: block;
+}
+
 h1, h2 {
   font-size: 32px;
 }

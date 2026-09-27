@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 {%- block head %}
 {{ super() }}
-{{- macros_seo::seo(config=config, title=page.title) }}
+{{-<seo config={config} title={page.title} page={page} current_url={current_url}/>}}
+{%- set section = get_section(path=page.ancestors | last) %}
+{%- if section.generate_feeds -%}
+  {%- for feed in config.feed_filenames -%}
+    {%- if feed is containing(pat='atom') -%}
+    <link rel="alternate" type="application/atom+xml" title="{{ config.title }} Atom Feed" href="{{ get_url(path=section.path ~ feed, trailing_slash=false) | safe }}">
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
 {%- endblock head %}
 
 {% block content %}

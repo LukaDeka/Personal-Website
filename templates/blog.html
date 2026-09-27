@@ -1,17 +1,39 @@
 {% extends "base.html" %}
 {%- block head %}
 {{ super() }}
-{{- macros_seo::seo(
-  config=config,
-  title="Blogs",
-  description="Welcome to my blog! Here I discuss all things relating tech, Linux, networking, DevOps, as well as my hobbies.",
+{{-<seo
+  config={config}
+  title="Blogs"
+  description="Welcome to my blog! Here I discuss all things relating tech, Linux, networking, DevOps, as well as my hobbies."
   thumbnail="https://lukadeka.com/images/blog-og.png"
-) }}
+  page=""
+  current_url={current_url}
+/>}}
+{%- if section.generate_feeds -%}
+  {%- for feed in config.feed_filenames -%}
+    {%- if feed is containing(pat='atom') -%}
+    <link rel="alternate" type="application/atom+xml" title="{{ config.title }} Atom Feed" href="{{ get_url(path=section.path ~ feed, trailing_slash=false) | safe }}">
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
 {%- endblock head %}
 
 {% block content %}
 <h1 class="title">{{ section.title }}</h1>
 <div id="main-content">
+{%- if section.generate_feeds -%}
+  {%- for feed in config.feed_filenames -%}
+    {%- if feed is containing(pat='atom') -%}
+    <div>
+    Subscribe to the
+    <a id="atom-link" href="{{ get_url(path=section.path ~ feed, trailing_slash=false) | safe }}" target="_blank" rel="noopener noreferrer" title="Atom Feed">
+      atom feed
+      <img src="/resources/atom.svg" alt="Atom feed" width="40" height="40">
+    </a>
+    </div>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
   {% for page in section.pages %}
   <div class="box">
     <h2><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h2>

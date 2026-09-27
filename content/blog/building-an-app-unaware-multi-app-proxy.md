@@ -60,7 +60,7 @@ Fixing these, and more, required iteration, and creative solutions.
 
 To start, traditional reverse-proxies like nginx already handle these cases - rewriting HTML is trivial. I decided to make all `src`/`href`/`action` attributes have absolute paths, e.g. `src="/api/v1/proxy/123/style.css"`, while making sure 3rd party domains or other paths like these aren't rewritten:
 
-`javascript:`, `mailto:john@example.com`, `{{ ... }}` (Angular variable)
+`javascript:`, `mailto:john@example.com`, `{% raw %}{{ ... }}{% endraw %}` (Angular variable)
 
 > 3\. Digest authentication can't be proxied since it was designed to prevent Man-In-The-Middle (MITM) attacks
 

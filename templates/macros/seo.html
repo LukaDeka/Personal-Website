@@ -1,4 +1,4 @@
-{%- macro seo( config, title="", description="", thumbnail="", is_404=false ) %}
+{%- component seo(config, title="", description="", thumbnail="", is_404=false, page, current_url="") %}
 
 {%- if is_404 -%}
   <meta name="robots" content="noindex, follow">
@@ -35,7 +35,7 @@
   <meta name="description" content="{{ description }}">
   <meta property="og:description" content="{{ description }}">
   <meta name="twitter:description" content="{{ description }}">
-{%- elif page.description %}
+{%- elif page and page.description %}
   <meta name="description" content="{{ page.description }}">
   <meta property="og:description" content="{{ page.description }}">
   <meta name="twitter:description" content="{{ page.description }}">
@@ -47,9 +47,9 @@
   <link rel="canonical" href="{{ page_url | safe }}">
   <meta property="og:url" content="{{ page_url | safe }}">
   <meta name="twitter:url" content="{{ page_url | safe }}">
-{%- if page.extra.keywords and config.extra.keywords %}
+{%- if page and page.extra.keywords and config.extra.keywords %}
   <meta name="keywords" content="{{ page.extra.keywords }}, {{ config.extra.keywords }}">
-{%- elif page.extra.keywords %}
+{%- elif page and page.extra.keywords %}
   <meta name="keywords" content="{{ page.extra.keywords }}">
 {%- elif config.extra.keywords %}
   <meta name="keywords" content="{{ config.extra.keywords }}">
@@ -60,7 +60,7 @@
 {#- SEO MEDIA START #}
 {%- if thumbnail %}
   <meta name="twitter:card" content="summary_large_image">
-  {%- if thumbnail is matching("^http[s]?://") %}
+  {%- if thumbnail is matching(pat="^http[s]?://") %}
   <meta name="twitter:image" content="{{ thumbnail }}">
   <meta property="og:image" content="{{ thumbnail }}">
   {%- else %}
@@ -68,14 +68,14 @@
   <meta property="og:image" content="{{ get_url(path=thumbnail, trailing_slash=false) }}">
   {%- endif %}
 
-{%- elif page.extra.thumbnail %}
+{%- elif page and page.extra.thumbnail %}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{{ get_url(path=page.path ~ page.extra.thumbnail, trailing_slash=false) }}">
   <meta property="og:image" content="{{ get_url(path=page.path ~ page.extra.thumbnail, trailing_slash=false) }}">
 
-{%- elif page.extra.static_thumbnail %}
+{%- elif page and page.extra.static_thumbnail %}
   <meta name="twitter:card" content="summary_large_image">
-  {%- if page.extra.static_thumbnail is matching("^http[s]?://") %}
+  {%- if page.extra.static_thumbnail is matching(pat="^http[s]?://") %}
   <meta name="twitter:image" content="{{ page.extra.static_thumbnail }}">
   <meta property="og:image" content="{{ page.extra.static_thumbnail }}">
   {%- else %}
@@ -92,12 +92,12 @@
   <meta property="og:site_name" content="{{ config.title }}">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
-{%- if page.updated %}
+{%- if page and page.updated %}
   <meta property="og:updated_time" content="{{ page.updated | date(format='%F') }}">
-{%- elif page.date %}
+{%- elif page and page.date %}
   <meta property="og:updated_time" content="{{ page.date | date(format='%F') }}">
 {%- endif %}
 
 {%- endif %}
 {#- Extra SEO END #}
-{%- endmacro %}
+{%- endcomponent seo %}
