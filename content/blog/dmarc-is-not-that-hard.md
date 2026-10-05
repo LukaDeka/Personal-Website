@@ -2,7 +2,7 @@
 title = "DMARC is not that hard"
 description = "A blog about how many companies fail to set up DMARC properly."
 date = 2026-09-27
-updated = 2026-09-27
+updated = 2026-10-05
 
 [extra]
 long_description = "A blog about how many companies fail to set up DMARC properly, which has led to me getting error messages from them."
@@ -100,6 +100,7 @@ I even received an automatic mail from a "**Technology Leader**" from **SAP**, t
 I wonder why the "Technology Leader" never checked why DMARC reports constantly land in their mailbox.
 
 Other domains included:
+* fritz.com - They make routers/networking gear
 * ashbyhq.com - Job application platform
 * cresta.ai - Where I applied for a job
 * gozauber.com - Where I applied for a job
@@ -107,3 +108,5 @@ Other domains included:
 This gave me an idea, to write a follow-up email informing them of the misconfiguration, and offering that I could fix it if they were to hire me, but people don't get the best first-impression when they're told they messed up.
 
 All in all, seeing these mails when I wake up just makes me laugh a little, and I wanted to share that experience.
+
+Update: I'll be updating this list to serve as a "wall of shame" because it's funny.
