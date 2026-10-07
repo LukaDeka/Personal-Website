@@ -2,7 +2,7 @@
 title = "DMARC is not that hard"
 description = "A blog about how many companies fail to set up DMARC properly."
 date = 2026-09-27
-updated = 2026-10-05
+updated = 2026-10-07
 
 [extra]
 long_description = "A blog about how many companies fail to set up DMARC properly, which has led to me getting error messages from them."
@@ -100,7 +100,9 @@ I even received an automatic mail from a "**Technology Leader**" from **SAP**, t
 I wonder why the "Technology Leader" never checked why DMARC reports constantly land in their mailbox.
 
 Other domains included:
-* fritz.com - They make routers/networking gear
+* databricks.com - "Leading Data and AI platform", one of the top tech companies in EU
+* scout24.com - One of the biggest real estate marketplaces
+* fritz.com - They manufacture/design routers/networking gear
 * ashbyhq.com - Job application platform
 * cresta.ai - Where I applied for a job
 * gozauber.com - Where I applied for a job
