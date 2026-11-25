@@ -16,102 +16,114 @@
   </p>
 <div>
 <div id="main-content">
-  <h2>Projects</h2>
-  <div class="box">
-    <h3><a target="_blank" rel="noopener noreferrer dofollow" href="https://hexname.com">HexName</a></h3>
-    <span>
-    <p>
-       After 4.5 months of work, I'm proud to finally announce the launch of my project <a target="_blank" rel="noopener noreferrer dofollow" href="https://hexname.com">HexName</a>, the backend/frontend/infrastructure of which I built on my own.
-    </p>
-    <p>
-      When learning about homelabbing and DNS, I tested out many free DDNS services - none of which I'd recommend nowadays. Because of the lack of better alternatives, and for learning purposes, I decided to build a reliable, forever-free alternative I can confidently recommend to others. After 4.5 months, I finally finished the backend, frontend, and deployed my app to the public.
-    </p>
-    <p>
-      Check out my <a href="/blog/introducing-hexname">blog where I talk about developing HexName</a> in detail!
-    </p>
-  </div>
-  <div class="box">
-    <h3><a target="_blank" rel="noopener noreferrer nofollow" href="https://github.com/amosproj/amos2025ss01-embark/">EMBArk - Django-UI for Siemens Energy</a></h3>
-    <p>
-      Open source university project in cooperation with Siemens Energy:
-      Further development of a Python web UI for managing firmware analyses via
-      SSH workers in a team, with a focus on agile methodologies.
-    </p>
-    <p>
-      Our student team had multiple weekly meetings in which we discussed the
-      future of the project and prioritized tickets. We also had mandatory
-      reviews for each pull-request which helped uphold a high standard of
-      code-quality.
-    </p>
-  </div>
-  <div class="box">
-    <h3><a target="_blank" rel="noopener noreferrer nofollow" href="https://github.com/LukaDeka/NixOS">Server administration of network systems with NixOS</a></h3>
-    <p>
-      Here I'm managing infrastructure declaratively with reproducible deployments across machines, integrating Cloudflare,
-Netbird/Tailscale mesh VPNs, NAT/CGNAT traversal, ZFS storage, monitoring, and secrets management via sops.
-    <p>
-    </p>
-      I improved mail deliverability and security by operating a self-hosted mail server with SPF/DKIM/DMARC policies,
-MTA-STS, email reputation management, and DNS hardening
-    </p>
-    <p>
-      This is currently my main hobby. Started in 2024, now I rely on many of
-      these services. I also run a server for my parents which they use for
-      media storage as well as QoL improvements like cloud-printing. This server
-      is also used as a remote backup.
-    </p>
-    <p>
-      With this, my journey to degoogle my life and rely less on external
-      services started.
-    </p>
-  </div>
-  <div class="box">
-    <h3><a target="_blank" rel="noopener noreferrer nofollow" href="https://github.com/LukaDeka/FileArchiver">File archiver in C</a></h3>
-    <span>
-    <p>
-      Archives/extracts files in its own format using Huffman coding.
-      Implements multi-stage compression for a minimal file size. Programmed
-      without external dependencies or libraries.
-    </p>
-    <p>
-      This was done to learn about Huffman coding and different file
-      compression techniques. I also had to come up with my own format to
-      overcome the challenges of storing data in bits instead of bytes (as per
-      the algorithm).
-    </p>
-  </div>
   <h2>Career</h2>
   <div class="box">
     <h3>Infrastructure Software Engineer – Dilax Intelcom</h3>
     <p>
-      Designed and built a custom application-agnostic reverse-proxy embedded in a Java/Spring Boot app that routes requests to network-isolated sensors via URL-based rules, eliminating the need for 1000+ device-specific configurations while enforcing centralized authentication.
+      Took over an 18-month stalled cross-team customer-access problem and delivered it end-to-end in ~2 months, owning design, implementation, and rollout.
     </p>
     <p>
-      Built and operated deployment automation for 60+ Linux hosts, including SSH-based rollout tooling, improving infrastructure reliability and repeatability across production systems.
+      Built a <a href="/blog/building-an-app-unaware-multi-app-proxy/">custom application-agnostic reverse-proxy</a> in Java/Spring Boot that put network-isolated sensors behind one domain with centralized auth, eliminating 1000+ device-specific configs and VPN setup/maintenance effort.
     </p>
     <p>
-      Implemented fleet-wide monitoring with Prometheus, Grafana, covering per-service state and proactive alerting.
+      Reverse-engineered undocumented sensor web-apps to make them proxy-transparent via HTML/JS rewriting, Service Workers, and stateless digest-auth handling.
+    </p>
+    <p>
+      Spearheaded the migration of 60+ Linux hosts off CentOS, and automated installations with NixOS-Anywhere, set up Prometheus/Grafana monitoring and alerting, making production releases repeatable and failures visible.
+    </p>
+    <p>
+      Served as the engineering point of contact between Customer Relations &amp; Operations, IT, and Software Development on multi-team projects, aligning priorities and escalating blockers.
     </p>
   </div>
   <div class="box">
-    <h3>Junior Backend Engineer Internship – Talkpal Inc.</h3>
+    <h3>Backend Engineer Internship – Talkpal Inc.</h3>
     <p>
       Improved reliability of email scheduling services by optimizing Redis queues in a NestJS microservices backend while diagnosing and resolving PostgreSQL-related failures across API workflows.
     </p>
     <p>
-      Improved maintainability of 20-30 NestJS API endpoints by refactoring large handlers into smaller service modules with clearer responsibilities and more testable boundaries.
+      Improved maintainability of 30+ NestJS API endpoints by refactoring large handlers into smaller service modules with clearer responsibilities and more testable boundaries.
     </p>
   </div>
   <div class="box">
-    <h3>Information Technology Support Specialist – Cura Unternehmensgruppe GmbH</h3>
-    <span>
+    <h3>IT Support Specialist – Cura GmbH</h3>
     <p>
-      Support with network and user administration, hardware maintenance and
-      management, automation, and documentation in the IT field.
+      Administered network infrastructure and internal systems, automating recurring IT workflows via scripting.
     </p>
     <p>
-      I gained invaluable people-skills, as well as further developed my
-      logical reasoning.
+      Eliminated 95% of manual onboarding effort in our IT by building a PowerShell pipeline that converts HR exports into Microsoft 365 bulk-import files, provisioning thousands of employee accounts with a simple terminal interface.
+    </p>
+  </div>
+  <h2>Projects</h2>
+  <div class="box">
+    <h3><a target="_blank" rel="noopener noreferrer dofollow" href="https://hexname.com">HexName.com – Free DNS Management Platform</a></h3>
+    <p>
+      Built a managed DNS platform reaching 480+ users; developed in Rust and SvelteKit with a dashboard, APIs, Dynamic DNS, and 7+ record types.
+    </p>
+    <p>
+      Architected authoritative DNS on two public PowerDNS servers with DNSSEC-signed zones and automated zone provisioning, serving 200K+ DNS queries daily.
+    </p>
+    <p>
+      Grew HexName to 2.2k+ daily page views, driven by organic search and owning SEO end-to-end: Ahrefs keyword strategy, 6+ targeted blog posts, a backlink campaign, and technical optimization to Lighthouse 100s.
+    </p>
+    <p>
+      Read more in my <a href="/blog/introducing-hexname">blog post about developing HexName</a>.
+    </p>
+  </div>
+  <div class="box">
+    <h3><a target="_blank" rel="noopener noreferrer nofollow" href="https://github.com/e-m-b-a/embark">EMBArk – Analysis Orchestration for Siemens Energy</a></h3>
+    <p>
+      Led a team of 4 engineers, working with 2 Product Owners to refine requirements, and deliver features in sprints.
+    </p>
+    <p>
+      Contributed firmware analysis orchestration features to a Django platform for Siemens Energy, enabling jobs to run across distributed SSH workers.
+    </p>
+  </div>
+  <div class="box">
+    <h3><a target="_blank" rel="noopener noreferrer nofollow" href="https://github.com/LukaDeka/NixOS">Self-hosted NixOS IT-infrastructure</a></h3>
+    <p>
+      Declaratively managed 6+ self-hosted servers across 3 regions with reproducible NixOS deployments, running 15+ services from a version-controlled config.
+    </p>
+    <p>
+      Automated encrypted, incremental daily backups on all machines with Restic to an offsite target, protecting 10+ services and a custom mail server against data loss and enabling disaster recovery.
+    </p>
+    <p>
+      Evaluated and tested 6 network/VPN architectures (WireGuard, Tailscale, Headscale, Cloudflare Tunnels, OpenZiti, NetBird) <a href="/blog/how-to-cope-with-losing-a-public-ip-as-a-homelabber/">in my blog</a> against self-hosting and privacy requirements after losing a public WAN IP to CGNAT, landing on a self-hosted NetBird mesh on a VPS, with exit nodes and ACLs.
+    </p>
+    <p>
+      Operated and hardened a self-hosted mail server with SPF/DKIM/DMARC, MTA-STS, and reputation management to ensure high mail deliverability.
+    </p>
+  </div>
+  <div class="box">
+    <h3><a target="_blank" rel="noopener noreferrer nofollow" href="https://github.com/LukaDeka/COI-DAMS">COI-DAMS – Open-Source Conflict of Interest Detection System</a></h3>
+    <p>
+      Built an open-source system in Python and Apache Spark, co-designed with my professor for my Bachelor thesis, providing an alternative to a proprietary tool.
+    </p>
+    <p>
+      Engineered a multi-source distributed BFS as Spark joins over an 880M+ edge co-author graph from DBLP and S2AG, expanding from all attendees at once and deduplicating pairs.
+    </p>
+    <p>
+      Processed a ~4,000-person conference in under 4 hours on one node, with ~10x runtime growth for a ~2,000x larger input.
+    </p>
+  </div>
+  <div class="box">
+    <h3><a target="_blank" rel="noopener noreferrer nofollow" href="https://github.com/LukaDeka/SystemDS-DIA">Apache SystemDS – DDCLZW Compressed Column Group</a></h3>
+    <p>
+      Designed and shipped a new LZW-based compressed column group (DDCLZW) inside Apache SystemDS in a team, a top-level Apache ML engine used for large-scale data science.
+    </p>
+    <p>
+      Benchmarked DDCLZW against the DDC baseline across sizes and cardinalities, reaching up to 93% memory reduction on repetitive data (40K rows).
+    </p>
+  </div>
+  <div class="box">
+    <h3><a target="_blank" rel="noopener noreferrer nofollow" href="https://github.com/LukaDeka/PLDI">LEMMS – Domain-Specific Language</a></h3>
+    <p>
+      Co-led the design and implementation of a new programming language in Java, driving a team of 8 engineers to 200+ commits in 12 weeks.
+    </p>
+  </div>
+  <div class="box">
+    <h3><a target="_blank" rel="noopener noreferrer nofollow" href="https://github.com/LukaDeka/FileArchiver">FileArchiver – Huffman Compression Tool in C</a></h3>
+    <p>
+      Programmed a WinRAR-style lossless compressor in C with zero dependencies, implementing Huffman coding with a fixed 2,559-bit serialized tree and multi-level encoding that shrinks files with multiple passes.
     </p>
   </div>
 </div>
